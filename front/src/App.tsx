@@ -1,7 +1,13 @@
+import { FC } from "react";
 import "./App.css";
+import Home from "./components/Home/Home";
 
-function App() {
-  return <div></div>;
-}
+const App: FC = () => {
+  return (
+    <>
+      <Home />
+    </>
+  );
+};
 
 export default App;

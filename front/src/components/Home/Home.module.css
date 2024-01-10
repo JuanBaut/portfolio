@@ -1,0 +1,16 @@
+.name {
+  display: flex;
+  flex-direction: row;
+}
+
+.fn {
+  color: var(--text);
+}
+
+.mn {
+  color: var(--accent);
+}
+
+.ln {
+  color: var(--text);
+}

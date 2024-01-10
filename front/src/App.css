@@ -1,0 +1,101 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --text: rgb(226, 240, 255);
+  --background: rgb(0, 7, 14);
+  --primary: rgb(128, 183, 253);
+  --secondary: rgb(151, 3, 36);
+  --accent: rgb(251, 143, 35);
+}
+
+@font-face {
+  font-family: "Fistalle";
+  src: local("Fistalle"), url(./fonts/Fistalle.ttf), format("truetype");
+}
+
+* {
+  color: var(--text);
+}
+
+body {
+  background-color: var(--background);
+}
+
+input,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 8px;
+  font-weight: 450;
+  font-family: "Red Rose Variable";
+}
+
+input {
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  width: fit-content;
+}
+
+button {
+  color: var(--background);
+  background-color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid var(--background);
+  border-radius: 16px;
+  margin: 0 12px 0 12px;
+  width: fit-content;
+  transition: 0.25s ease-out;
+  transition: 0.25s ease-in;
+}
+
+button:hover {
+  color: var(--text);
+  background-color: var(--secondary);
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-family: "Fistalle";
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-family: "Fistalle";
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-family: "Fistalle";
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5,
+button,
+input {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+h6 {
+  font-size: 0.75rem; /* 12px */
+}
