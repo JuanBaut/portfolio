@@ -5,11 +5,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --text: rgb(226, 240, 255);
-  --background: rgb(0, 7, 14);
-  --primary: rgb(128, 183, 253);
-  --secondary: rgb(151, 3, 36);
-  --accent: rgb(251, 143, 35);
+  --text: #f0f2f4;
+  --background: #040609;
+  --primary: #99b8df;
+  --secondary: #174c8d;
+  --accent: #358cf6;
 }
 
 @font-face {
@@ -35,7 +35,7 @@ h5,
 h6,
 p {
   margin: 0;
-  padding: 8px;
+  padding: 0 12px 0 12px;
   font-weight: 450;
   font-family: "Red Rose Variable";
 }
@@ -45,7 +45,7 @@ input {
   text-decoration: none;
   cursor: pointer;
   border: 2px solid var(--primary);
-  border-radius: 16px;
+  border-radius: 6px;
   width: fit-content;
 }
 
@@ -55,7 +55,7 @@ button {
   text-decoration: none;
   cursor: pointer;
   border: 2px solid var(--background);
-  border-radius: 16px;
+  border-radius: 6px;
   margin: 0 12px 0 12px;
   width: fit-content;
   transition: 0.25s ease-out;

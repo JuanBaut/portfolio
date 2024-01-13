@@ -1,9 +1,11 @@
 import { FC } from "react";
 import style from "./Home.module.css";
+import Navigation from "../Navigation/Navigation";
 
 const Home: FC = () => {
   return (
     <div>
+      <Navigation />
       <div className={style.name}>
         <h1 className={style.fn}>Juan</h1>
         <h1 className={style.mn}>Andres</h1>
