@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12vw 0 12vw;
+  height: 95vh;
+}
+
+.image {
+  width: 70vw;
+}
+
+.text {
+  margin-top: 4vh;
+  text-align: justify;
+}

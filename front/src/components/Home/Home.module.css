@@ -1,6 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  margin: 0 20vw 0 20vw;
+}
+
 .name {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  margin-bottom: 4vh;
 }
 
 .fn {
@@ -13,4 +26,8 @@
 
 .ln {
   color: var(--text);
+}
+
+.description {
+  text-align: center;
 }
