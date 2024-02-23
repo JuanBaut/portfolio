@@ -13,15 +13,16 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom: 4vh;
 }
 
 .fn {
   color: var(--text);
+  padding: 0 16px 0 16px;
 }
 
 .mn {
   color: var(--accent);
+  padding: 0 16px 0 0;
 }
 
 .ln {
@@ -30,4 +31,6 @@
 
 .description {
   text-align: center;
+  padding: 0;
+  margin: 0;
 }

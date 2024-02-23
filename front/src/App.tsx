@@ -1,5 +1,7 @@
 import { FC } from "react";
+
 import "./App.css";
+import "./css/body.css";
 import Home from "./components/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
