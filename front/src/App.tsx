@@ -1,4 +1,4 @@
-const App = () => {
+const App: React.FC = () => {
   return <div>helo</div>;
 };
 
