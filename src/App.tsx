@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="bg-zinc-700 text-white">what the hell</div>
+      <div className="rounded border-2">what the hell</div>
     </>
   );
 }
