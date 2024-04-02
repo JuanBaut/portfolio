@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="rounded border-2">what the hell</div>
+      <div className="rounded border-2">this is a test</div>
     </>
   );
 }
