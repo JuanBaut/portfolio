@@ -1,9 +1,7 @@
-function App() {
-  return (
-    <>
-      <div className="rounded border-2">this is a test</div>
-    </>
-  );
-}
+import About from "./features/About/About";
+
+const App: React.FC = () => {
+  return <About />;
+};
 
 export default App;
