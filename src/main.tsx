@@ -1,10 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./features/Errors/ErrorPage.tsx";
+import Projects from "./features/Projects/Projects.tsx";
+import Photos from "./features/Photos/Photos.tsx";
 import About from "./features/About/About.tsx";
+import App from "./App.tsx";
 
 const container = document.getElementById("root");
 
@@ -16,10 +18,20 @@ if (container) {
       path: "/",
       element: <App />,
       errorElement: <ErrorPage />,
-    },
-    {
-      path: "/me",
-      element: <About />,
+      children: [
+        {
+          path: "/",
+          element: <About />,
+        },
+        {
+          path: "/projects",
+          element: <Projects />,
+        },
+        {
+          path: "/photos",
+          element: <Photos />,
+        },
+      ],
     },
   ]);
 

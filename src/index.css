@@ -46,6 +46,7 @@
     --border: 180 17% 60%;
     --input: 180 18% 80%;
     --ring: 164 33% 60%;
+    --radius: 0.5rem;
   }
 }
 
@@ -57,4 +58,3 @@
     @apply bg-background text-foreground;
   }
 }
-

@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@types/node": "^20.12.2",
+    "@types/react-router-dom": "^5.3.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "eslint-plugin-react": "^7.34.1",

@@ -1,7 +1,13 @@
-import About from "./features/About/About";
+import { Outlet } from "react-router-dom";
+import NavBar from "./features/NavBar/NavBar";
 
 const App: React.FC = () => {
-  return <About />;
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
 };
 
 export default App;
