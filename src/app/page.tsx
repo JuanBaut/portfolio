@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="mx-auto w-[90%] px-2 sm:w-[640px] md:w-[640px] lg:w-[640px] xl:w-[640px] 2xl:w-[640px]">
       <div className="flex justify-between">
-        <p>
+        <p className="mt-auto">
           Juan
           <b>
             <i> Andres </i>
@@ -31,12 +31,12 @@ export default function Home() {
               <LinkedinIcon className="m-0 size-5 p-0" />
             </Button>
           </a>
-          <Button variant={"ghost"} className="size-7 p-0">
+          <Button variant={"ghost"} className="size-7 p-0 my-auto">
             <MoonIcon className="m-0 size-5 p-0" />
           </Button>
         </div>
       </div>
-      <div className="pt-4">
+      <div className="pt-2">
         <p className="text-justify text-muted">
           I am a full-stack web developer, although I see myself as a designer.
           Born and based in Colombia. I believe in designing things with passion
