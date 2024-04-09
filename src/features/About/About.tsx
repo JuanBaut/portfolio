@@ -13,20 +13,32 @@ const About: React.FC = () => {
           Bautista
         </p>
         <div className="flex gap-2">
-          <Button variant={"ghost"} className="size-7 p-0">
-            <Github className="m-0 size-5 p-0" />
-          </Button>
-          <Button variant={"ghost"} className="size-7 p-0">
-            <LinkedinIcon className="m-0 size-5 p-0" />
-          </Button>
+          <a
+            href="https://github.com/JuanBaut"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button variant={"ghost"} className="size-7 p-0">
+              <Github className="m-0 size-5 p-0" />
+            </Button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/juanandresdev/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button variant={"ghost"} className="size-7 p-0">
+              <LinkedinIcon className="m-0 size-5 p-0" />
+            </Button>
+          </a>
           <Button variant={"ghost"} className="size-7 p-0">
             <MoonIcon className="m-0 size-5 p-0" />
           </Button>
         </div>
       </div>
       <div className="pt-4">
-        <p className="text-justify">
-          I am a full-stack web developer, but more importantly I am a creative.
+        <p className="text-justify text-muted">
+          I am a full-stack web developer, although I see myself as a designer.
           Born and based in Colombia. I believe in designing things with passion
           in order to solve problems correctly with usability and aesthetics in
           mind.
