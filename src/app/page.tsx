@@ -1,3 +1,4 @@
+import ModeToggle from "@/components/theme-switch";
 import { Button } from "@/components/ui/button";
 import { Github, LinkedinIcon, MoonIcon } from "lucide-react";
 
@@ -31,9 +32,7 @@ export default function Home() {
               <LinkedinIcon className="m-0 size-5 p-0" />
             </Button>
           </a>
-          <Button variant={"ghost"} className="size-7 p-0 my-auto">
-            <MoonIcon className="m-0 size-5 p-0" />
-          </Button>
+          <ModeToggle />
         </div>
       </div>
       <div className="pt-2">

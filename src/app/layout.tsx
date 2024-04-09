@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const martian = Work_Sans({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -38,10 +39,15 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={martian.className}>
-        <header>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
-        </header>
-        {children}
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

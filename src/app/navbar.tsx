@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="mx-auto w-[50%] flex ">
+    <div className="mx-auto flex ">
       <NavigationMenu className="mx-auto my-4">
         <NavigationMenuList>
           <Link href={"/"}>

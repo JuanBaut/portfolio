@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  .light {
+  :root {
     --background: 192 33% 97%;
     --foreground: 195 11% 7%;
     --card: 192 33% 97%;
@@ -26,7 +26,7 @@
     --radius: 0.5rem;
   }
 
-  :root {
+  .dark {
     --background: 192 29% 3%;
     --foreground: 195 11% 93%;
     --card: 192 29% 3%;
@@ -58,4 +58,3 @@
     @apply bg-background text-foreground;
   }
 }
-
