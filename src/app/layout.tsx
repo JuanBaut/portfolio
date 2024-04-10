@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./navbar";
+import Navbar from "../components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const martian = Work_Sans({ subsets: ["latin"] });

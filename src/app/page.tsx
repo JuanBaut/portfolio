@@ -1,12 +1,14 @@
-import ModeToggle from "@/components/theme-switch";
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { Github, LinkedinIcon, MoonIcon } from "lucide-react";
+import { Github, LinkedinIcon } from "lucide-react";
+import { CldImage } from "next-cloudinary";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-[90%] px-2 sm:w-[640px] md:w-[640px] lg:w-[640px] xl:w-[640px] 2xl:w-[640px]">
+    <div className="mx-auto w-[95%] px-2 min-[640px]:w-[640px]">
       <div className="flex justify-between">
-        <p className="mt-auto">
+        <p className="my-auto">
           Juan
           <b>
             <i> Andres </i>
@@ -32,7 +34,6 @@ export default function Home() {
               <LinkedinIcon className="m-0 size-5 p-0" />
             </Button>
           </a>
-          <ModeToggle />
         </div>
       </div>
       <div className="pt-2">
@@ -42,6 +43,19 @@ export default function Home() {
           in order to solve problems correctly with usability and aesthetics in
           mind.
         </p>
+      </div>
+      <div className="p-1 mt-4 aspect-[16/9] overflow-hidden ring-1 ring-primary rounded flex h-auto mx-auto w-[100%] min-[640px]:w-[640px]">
+        <CldImage
+          className="object-cover rounded"
+          priority={true}
+          width="900"
+          height="400"
+          crop="crop"
+          gravity="face"
+          aspectRatio="16:9"
+          src="portfolio/me"
+          alt="me"
+        />
       </div>
     </div>
   );
