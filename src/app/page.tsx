@@ -7,13 +7,21 @@ import { CldImage } from "next-cloudinary";
 export default function Home() {
   return (
     <div className="mx-auto w-[95%] px-2 min-[640px]:w-[640px]">
-      <div className="flex justify-between">
-        <p className="my-auto">
-          Juan
-          <b>
-            <i> Andres </i>
-          </b>
-          Bautista
+      <div className="p-1 mt-4 aspect-[4/3] w-[95%] overflow-hidden rounded flex mx-auto min-[500px]:w-[400px]">
+        <CldImage
+          className="object-cover rounded"
+          priority={true}
+          width="900"
+          height="900"
+          zoom="0.9"
+          crop={"crop"}
+          src="portfolio/m34"
+          alt="me"
+        />
+      </div>
+      <div className="flex justify-between mt-4">
+        <p className="my-auto text-xl">
+          Juan <b>Andres</b> Bautista
         </p>
         <div className="flex gap-2">
           <a
@@ -38,24 +46,10 @@ export default function Home() {
       </div>
       <div className="pt-2">
         <p className="text-justify text-muted">
-          I am a full-stack web developer, although I see myself as a designer.
-          Born and based in Colombia. I believe in designing things with passion
-          in order to solve problems correctly with usability and aesthetics in
-          mind.
+          I am a full-stack web developer. Born and based in Colombia. I believe
+          in designing things with passion in order to solve problems correctly
+          with usability and aesthetics in mind.
         </p>
-      </div>
-      <div className="p-1 mt-4 aspect-[16/9] overflow-hidden ring-1 ring-primary rounded flex h-auto mx-auto w-[100%] min-[640px]:w-[640px]">
-        <CldImage
-          className="object-cover rounded"
-          priority={true}
-          width="900"
-          height="400"
-          crop="crop"
-          gravity="face"
-          aspectRatio="16:9"
-          src="portfolio/me"
-          alt="me"
-        />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export default async function Photos() {
         {images.map((image) => (
           <div
             key={image.id}
-            className="aspect-square w-[300px] overflow-hidden rounded"
+            className="aspect-square w-[380px] overflow-hidden rounded"
           >
             <Image
               className="object-cover rounded h-full"

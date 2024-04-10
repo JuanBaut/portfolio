@@ -3,14 +3,14 @@
 import NavbarMobile from "@/components/navbar-mobile";
 import ModeToggle from "@/components/theme-switch";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Languages } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+//import { Languages } from "lucide-react";
+//import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -21,9 +21,9 @@ export default function Navbar() {
         <NavigationMenuList className="flex justify-between">
           <div className="flex gap-2 my-auto">
             <ModeToggle />
-            <Button variant={"ghost"} className="size-7 p-0">
-              <Languages className="size-5 p-0 m-0" />
-            </Button>
+            {/*<Button variant={"ghost"} className="size-7 p-0">*/}
+            {/*  <Languages className="size-5 p-0 m-0" />*/}
+            {/*</Button>*/}
           </div>
           <div className="flex gap-2 max-[485px]:hidden">
             <Link href={"/"}>
