@@ -19,7 +19,7 @@ export default function Navbar() {
     <>
       <NavigationMenu className="mx-auto w-[90%] sm:w-[640px] md:w-[640px] lg:w-[640px] xl:w-[640px] 2xl:w-[640px]">
         <NavigationMenuList className="flex justify-between">
-          <div className="flex gap-2 my-auto">
+          <div className="my-auto flex gap-2">
             <ModeToggle />
             {/*<Button variant={"ghost"} className="size-7 p-0">*/}
             {/*  <Languages className="size-5 p-0 m-0" />*/}

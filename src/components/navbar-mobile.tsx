@@ -15,7 +15,7 @@ export default function NavbarMobile() {
         <Menu className="m-0 size-5 p-0" />
       </SheetTrigger>
       <SheetContent side={"top"}>
-        <div className="flex gap-2 mt-4 justify-center">
+        <div className="mt-4 flex justify-center gap-2">
           <Link href={"/"}>
             {pathname === "/" ? (
               <Badge className="text-sm font-normal" variant={"outline"}>

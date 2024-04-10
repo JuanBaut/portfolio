@@ -7,10 +7,10 @@ import { CldImage } from "next-cloudinary";
 export default function Home() {
   return (
     <div className="mx-auto w-[95%] px-2 min-[640px]:w-[640px]">
-      <div className="p-1 mt-4 w-full overflow-hidden rounded flex mx-auto ">
-        <div className="bg-primary w-full" />
+      <div className="mx-auto mt-4 flex w-full overflow-hidden rounded p-1 ">
+        <div className="w-full bg-primary" />
         <CldImage
-          className="object-cover rounded min-[400px]:w-[300px] aspect-square"
+          className="aspect-square rounded object-cover min-[400px]:w-[300px]"
           priority={true}
           width="900"
           height="900"
@@ -19,9 +19,9 @@ export default function Home() {
           src="portfolio/m34"
           alt="me"
         />
-        <div className="bg-accent w-full" />
+        <div className="w-full bg-accent" />
       </div>
-      <div className="flex justify-between mt-4">
+      <div className="mt-4 flex justify-between">
         <p className="my-auto text-xl">
           Juan <b>Andres</b> Bautista
         </p>

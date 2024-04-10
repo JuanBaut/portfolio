@@ -4,7 +4,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 
 export default function Dotfiles() {
   return (
-    <Card className="border-primary mb-4 p-2">
+    <Card className="mb-4 border-primary p-2">
       <div className="flex flex-col gap-2">
         <CardTitle>
           <a

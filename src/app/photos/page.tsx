@@ -8,14 +8,14 @@ export default async function Photos() {
   return (
     <div className="mx-auto w-full px-2">
       <p className="text-center">Photos taken with my Nikon D3400 for fun.</p>
-      <div className="flex flex-wrap gap-4 mx-auto justify-center m-4 items-baseline">
+      <div className="m-4 mx-auto flex flex-wrap items-baseline justify-center gap-4">
         {images.map((image) => (
           <div
             key={image.id}
             className="aspect-square w-[380px] overflow-hidden rounded"
           >
             <Image
-              className="object-cover rounded h-full"
+              className="h-full rounded object-cover"
               height={image.height}
               width={image.width}
               src={image.url}
