@@ -3,6 +3,7 @@ import Image from "next/image";
 
 export default async function Photos() {
   const images = await getImages();
+  console.log(images);
 
   return (
     <div className="mx-auto w-full px-2">

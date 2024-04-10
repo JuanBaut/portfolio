@@ -39,11 +39,21 @@ export async function getImages() {
     const data: DataStructure[] = results.resources;
 
     return data.map((image) => {
-      const { width, height } = image;
+      const height = 1000;
+      const width = 1000;
+      const aspectRatio = "1:1";
+
+      const baseUrl = image.secure_url.split("/upload/")[0];
+      const publicId = image.secure_url.split("/upload/")[1];
+
+      const transformation = `c_fill,w_${width},h_${height},ar_${aspectRatio}`;
+
+      const newUrl = `${baseUrl}/upload/${transformation}/${publicId}`;
+
       return {
+        url: newUrl,
         id: image.asset_id,
         title: image.public_id,
-        url: image.secure_url,
         width,
         height,
       };
