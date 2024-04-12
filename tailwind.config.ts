@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+
+const config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -9,6 +11,10 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      xs: "400px",
+      ...defaultTheme.screens,
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -71,12 +77,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        sans: ["Fragment Mono"],
-        serif: ["Fragment Mono"],
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+} satisfies Config;
 
+export default config;

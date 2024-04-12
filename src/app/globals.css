@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 192 33% 97%;
+    --foreground: 195 11% 7%;
+    --card: 192 33% 97%;
+    --card-foreground: 195 11% 7%;
+    --popover: 192 33% 97%;
+    --popover-foreground: 195 11% 7%;
+    --primary: 196 44% 26%;
+    --primary-foreground: 192 33% 97%;
+    --secondary: 195 59% 69%;
+    --secondary-foreground: 195 11% 7%;
+    --muted: 192 33% 20%;
+    --muted-foreground: 194 11% 70%;
+    --accent: 195 76% 44%;
+    --accent-foreground: 195 11% 7%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 195 11% 7%;
+    --border: 192 33% 20%;
+    --input: 192 33% 20%;
+    --ring: 195 76% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 192 29% 3%;
+    --foreground: 195 11% 93%;
+    --card: 192 29% 3%;
+    --card-foreground: 195 11% 93%;
+    --popover: 192 29% 3%;
+    --popover-foreground: 195 11% 93%;
+    --primary: 196 44% 74%;
+    --primary-foreground: 192 29% 3%;
+    --secondary: 195 59% 31%;
+    --secondary-foreground: 195 11% 93%;
+    --muted: 192 29% 80%;
+    --muted-foreground: 195 11% 93%;
+    --accent: 195 76% 56%;
+    --accent-foreground: 192 29% 3%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 192 10% 10%;
+    --border: 192 29% 60%;
+    --input: 192 29% 80%;
+    --ring: 195 76% 60%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes gradientChange {
+    0% {
+      background-position: 0%;
+    }
+
+    50% {
+      background-position: 100%;
+    }
+
+    100% {
+      background-position: 0%;
+    }
+  }
+
+  .gradient {
+    background: linear-gradient(90deg, accent, secondary);
+    background-size: 200% 200%;
+  }
+
+  .element-to-rotate {
+    animation: gradientChange 4s ease infinite;
+  }
+}
