@@ -19,11 +19,16 @@ export default function AppGuard() {
             </a>
           </CardTitle>
           <div className="flex flex-wrap gap-2">
-            <Badge variant={"default"}>TS</Badge>
-            <Badge variant={"default"}>React</Badge>
-            <Badge variant={"default"}>Redux</Badge>
-            <Badge variant={"default"}>Tailwind</Badge>
-            <Badge variant={"default"}>Shadcn/ui</Badge>
+            <Badge>TS</Badge>
+            <Badge>React</Badge>
+            <Badge>Redux</Badge>
+            <Badge>Jotai</Badge>
+            <Badge>Tailwind</Badge>
+            <Badge>Shadcn/ui</Badge>
+
+            <Badge variant={"secondary"}>PostgreSQL</Badge>
+            <Badge variant={"secondary"}>Express.js</Badge>
+            <Badge variant={"secondary"}>Sequalize</Badge>
           </div>
         </div>
         <div className="pt-2 text-sm text-muted">

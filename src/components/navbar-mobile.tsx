@@ -18,12 +18,12 @@ export default function NavbarMobile() {
         <div className="mt-4 flex justify-center gap-2">
           <Link href={"/"}>
             {pathname === "/" ? (
-              <Badge className="text-sm font-normal" variant={"outline"}>
+              <Badge className="text-md font-normal" variant={"outline"}>
                 about
               </Badge>
             ) : (
               <Badge
-                className="border-transparent text-sm font-normal"
+                className="text-md border-transparent font-normal"
                 variant={"outline"}
               >
                 about
@@ -33,12 +33,12 @@ export default function NavbarMobile() {
 
           <Link href={"/projects"}>
             {pathname === "/projects" ? (
-              <Badge className="text-sm font-normal" variant={"outline"}>
+              <Badge className="text-md font-normal" variant={"outline"}>
                 projects
               </Badge>
             ) : (
               <Badge
-                className="border-transparent text-sm font-normal"
+                className="text-md border-transparent font-normal"
                 variant={"outline"}
               >
                 projects
@@ -48,12 +48,12 @@ export default function NavbarMobile() {
 
           <Link href={"/photos"}>
             {pathname === "/photos" ? (
-              <Badge className="text-sm font-normal" variant={"outline"}>
+              <Badge className="text-md font-normal" variant={"outline"}>
                 photos
               </Badge>
             ) : (
               <Badge
-                className="border-transparent text-sm font-normal"
+                className="text-md border-transparent font-normal"
                 variant={"outline"}
               >
                 photos

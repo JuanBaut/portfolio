@@ -18,10 +18,10 @@ export default function Portfolio() {
           </a>
         </CardTitle>
         <div className="flex flex-wrap gap-2">
-          <Badge variant={"default"}>TS</Badge>
-          <Badge variant={"default"}>Next.js</Badge>
-          <Badge variant={"default"}>Tailwind</Badge>
-          <Badge variant={"default"}>Shadcn/ui</Badge>
+          <Badge>TS</Badge>
+          <Badge>Next.js</Badge>
+          <Badge>Tailwind</Badge>
+          <Badge>Shadcn/ui</Badge>
         </div>
       </div>
       <p className="pt-2 text-sm text-muted">

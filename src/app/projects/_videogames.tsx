@@ -18,9 +18,13 @@ export default function VideogamesApp() {
           </a>
         </CardTitle>
         <div className="flex flex-wrap gap-2">
-          <Badge variant={"default"}>JS</Badge>
-          <Badge variant={"default"}>React</Badge>
-          <Badge variant={"default"}>Redux</Badge>
+          <Badge>JS</Badge>
+          <Badge>React</Badge>
+          <Badge>Redux</Badge>
+
+          <Badge variant={"secondary"}>PostgreSQL</Badge>
+          <Badge variant={"secondary"}>Express.js</Badge>
+          <Badge variant={"secondary"}>Sequalize</Badge>
         </div>
       </div>
       <div className="pt-2 text-sm text-muted">

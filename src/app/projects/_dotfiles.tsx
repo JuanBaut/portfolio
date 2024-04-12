@@ -18,8 +18,8 @@ export default function Dotfiles() {
           </a>
         </CardTitle>
         <div className="flex flex-wrap gap-2">
-          <Badge variant={"default"}>Neovim</Badge>
-          <Badge variant={"default"}>Shell</Badge>
+          <Badge>Neovim</Badge>
+          <Badge>Shell</Badge>
         </div>
       </div>
       <p className="pt-2 text-sm text-muted">
