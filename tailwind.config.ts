@@ -12,7 +12,7 @@ const config = {
   prefix: "",
   theme: {
     screens: {
-      xs: "475px",
+      xs: "400px",
       ...defaultTheme.screens,
     },
     container: {

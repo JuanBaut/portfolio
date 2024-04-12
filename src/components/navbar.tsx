@@ -71,7 +71,7 @@ export default function Navbar() {
               )}
             </Link>
           </div>
-          <div className="xs:hidden">
+          <div className="min-[485px]:hidden">
             <NavbarMobile />
           </div>
         </NavigationMenuList>
