@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 const martian = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "-> /Andres Bautista",
-  description: "Andres' portfolio",
+  title: "Andres Bautista",
+  description: "I like building stuff.",
 };
 
 export default function RootLayout({
