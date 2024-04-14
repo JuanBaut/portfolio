@@ -8,7 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-export default function Contact() {
+export default function ContactButton() {
   return (
     <>
       <Dialog>
