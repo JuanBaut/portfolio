@@ -1,8 +1,9 @@
+import { ThemeProvider } from "@/components/theme-provider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
-import "./globals.css";
 import Navbar from "../components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
 
 const martian = Work_Sans({ subsets: ["latin"] });
 
@@ -48,6 +49,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );

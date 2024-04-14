@@ -1,6 +1,6 @@
 "use client";
 
-import Contact from "@/components/contact";
+import { Contact } from "lucide-react";
 import { CldImage } from "next-cloudinary";
 
 export default function Home() {
