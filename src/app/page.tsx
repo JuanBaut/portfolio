@@ -1,6 +1,6 @@
 "use client";
 
-import { Contact } from "@components/contact";
+import { ContactButton } from "../components/contact.tsx";
 import { CldImage } from "next-cloudinary";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
         with usability and aesthetics in mind.
       </p>
       <div className="flex justify-center pt-4">
-        <Contact />
+        <ContactButton />
       </div>
     </div>
   );
