@@ -1,6 +1,6 @@
 "use client";
 
-import ContactButton from "../components/contact.tsx";
+import ContactButton from "../components/contact";
 import { CldImage } from "next-cloudinary";
 
 export default function Home() {
