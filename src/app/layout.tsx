@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Work_Sans } from "next/font/google";
 import Navbar from "../components/navbar";
 import "./globals.css";
@@ -20,6 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          id="metaThemeColor"
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="#05090a"
+        />
+        <meta
+          id="metaThemeColor"
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="#f5f9fa"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
