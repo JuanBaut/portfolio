@@ -1,8 +1,22 @@
-import { getImages } from "@/lib/cloudinary";
-import Image from "next/image";
+"use client";
 
-export default async function Images() {
-  const images = await getImages();
+import { getImages } from "@/lib/cloudinary";
+import { ImagesType } from "@/lib/images-object-types";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
+export default function Images() {
+  const [images, setImages] = useState<ImagesType>([]);
+
+  useEffect(() => {
+    async function fetchImages() {
+      const data: ImagesType = await getImages();
+      if (data.length !== 0) {
+        setImages(data);
+      }
+    }
+    fetchImages();
+  });
 
   if (images.length === 0) {
     return (

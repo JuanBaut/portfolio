@@ -13,9 +13,7 @@ export default function Home() {
         in designing things with passion in order to solve problems correctly
         with usability and aesthetics in mind.
       </p>
-      <div className="flex justify-center pt-4">
-        <ContactButton />
-      </div>
+      <ContactButton />
     </div>
   );
 }

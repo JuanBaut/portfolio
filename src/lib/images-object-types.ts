@@ -24,3 +24,13 @@ export interface ImagesObjectType {
   created_by: object;
   uploaded_by: object;
 }
+
+export type ImagesType =
+  | {
+      url: string;
+      id: string;
+      title: string;
+      width: number;
+      height: number;
+    }[]
+  | "Error fetching the images";

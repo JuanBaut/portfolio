@@ -10,7 +10,7 @@ import {
 
 export default function ContactButton() {
   return (
-    <>
+    <div className="flex justify-center pt-4">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant={"special"} className="my-auto h-min">
@@ -76,6 +76,6 @@ export default function ContactButton() {
           </div>
         </DialogContent>
       </Dialog>
-    </>
+    </div>
   );
 }
