@@ -1,4 +1,4 @@
-export interface DataTypes {
+export interface ImagesObjectType {
   asset_id: string;
   public_id: string;
   folder: string;

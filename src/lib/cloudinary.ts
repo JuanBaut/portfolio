@@ -1,4 +1,4 @@
-import { DataTypes } from "./data-types";
+import { ImagesObjectType } from "./images-object-types";
 
 export async function getImages() {
   try {
@@ -11,7 +11,7 @@ export async function getImages() {
       },
     ).then((response) => response.json());
 
-    const data: DataTypes[] = results.resources;
+    const data: ImagesObjectType[] = results.resources;
 
     return data.map((image) => {
       const height = 1000;
@@ -22,7 +22,6 @@ export async function getImages() {
       const publicId = image.secure_url.split("/upload/")[1];
 
       const transformation = `c_fill,w_${width},h_${height},ar_${aspectRatio}`;
-
       const newUrl = `${baseUrl}/upload/${transformation}/${publicId}`;
 
       return {
@@ -35,6 +34,6 @@ export async function getImages() {
     });
   } catch (error) {
     console.error("Error fetching images:", error);
-    return [];
+    return "Error fetching the images";
   }
 }
