@@ -25,7 +25,7 @@ export interface ImagesObjectType {
   uploaded_by: object;
 }
 
-export type ImagesType =
+export type ResponseType =
   | {
       url: string;
       id: string;
@@ -34,3 +34,11 @@ export type ImagesType =
       height: number;
     }[]
   | "Error fetching the images";
+
+export type ImageType = {
+  url: string;
+  id: string;
+  title: string;
+  width: number;
+  height: number;
+};

@@ -9,8 +9,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-//import { Languages } from "lucide-react";
-//import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -21,9 +19,6 @@ export default function Navbar() {
         <NavigationMenuList className="flex justify-between">
           <div className="my-auto flex gap-2">
             <ModeToggle />
-            {/*<Button variant={"ghost"} className="size-7 p-0">*/}
-            {/*  <Languages className="size-5 p-0 m-0" />*/}
-            {/*</Button>*/}
           </div>
           <div className="flex gap-2 max-[485px]:hidden">
             <Link href={"/"}>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useAnimate, useInView } from "framer-motion";
+import { motion, useAnimate, useInView } from "framer-motion";
 import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
 import { Skeleton } from "./ui/skeleton";
@@ -18,7 +18,10 @@ export default function AboutImage() {
 
   return (
     <div className="mx-auto mt-4 flex w-full overflow-hidden rounded">
-      <div className="w-full rounded bg-gradient-to-l from-secondary max-[400px]:hidden" />
+      <motion.div
+        className="w-full rounded bg-gradient-to-l from-secondary max-[400px]:hidden"
+        animate={{ opacity: [0, 100] }}
+      />
       <CldImage
         ref={scope}
         id="meBruv"
@@ -39,7 +42,10 @@ export default function AboutImage() {
       {loading ? (
         <Skeleton className="mx-1 aspect-square size-full rounded bg-accent max-[400px]:m-0 min-[400px]:size-[300px]" />
       ) : null}
-      <div className="w-full rounded bg-gradient-to-r from-secondary max-[400px]:hidden" />
+      <motion.div
+        className="w-full rounded bg-gradient-to-r from-secondary max-[400px]:hidden"
+        animate={{ opacity: [0, 100] }}
+      />
     </div>
   );
 }
