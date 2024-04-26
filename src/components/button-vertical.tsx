@@ -1,27 +1,24 @@
-import { Button } from "./ui/button"
+import NoKbdLink from "./no-kbd-link";
+import { Button } from "./ui/button";
 
 interface ButtonProps {
-  text: string
-  href: string
-  icon: JSX.Element
+  text: string;
+  href: string;
+  icon: JSX.Element;
 }
 
-export default function ButtonVertical(props: ButtonProps) {
+export default function ButtonVertical({ text, href, icon }: ButtonProps) {
   return (
-    <a
-      href={`${props.href}`}
-      target="_blank"
-      rel="noreferrer"
-    >
+    <NoKbdLink href={`${href}`}>
       <Button
         variant={"ghost_outline"}
-        className="flex w-52 mx-auto justify-between px-4 text-lg"
+        className="mx-auto flex w-full justify-between px-4 text-lg"
       >
-        <p className="gradient element-to-rotate bg-gradient-to-tr from-foreground to-accent bg-clip-text text-transparent inline-block" >
-          {props.text}
+        <p className="gradient element-to-rotate inline-block bg-gradient-to-tr from-foreground to-accent bg-clip-text text-transparent">
+          {text}
         </p>
-        {props.icon}
+        {icon}
       </Button>
-    </a >
-  )
+    </NoKbdLink>
+  );
 }

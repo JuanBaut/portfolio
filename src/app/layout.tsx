@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import Navbar from "../components/navbar";
 import "./globals.css";
+import ContactMenu from "@/components/contact-menu";
 
 const martian = Work_Sans({ subsets: ["latin"] });
 
@@ -60,6 +61,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <ContactMenu />
         </ThemeProvider>
         <SpeedInsights />
       </body>

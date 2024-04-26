@@ -1,5 +1,4 @@
 import AboutImage from "@/components/about-image";
-import ContactButtons from "@/components/contact-menu";
 
 export default function Home() {
   return (
@@ -13,7 +12,9 @@ export default function Home() {
         in designing things with passion in order to solve problems correctly
         with usability and aesthetics in mind.
       </p>
-      <ContactButtons />
+      <p className="pt-1 text-center text-muted">
+        <i>C1 English · A2 German · Native Spanish</i>
+      </p>
     </div>
   );
 }
