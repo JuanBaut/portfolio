@@ -1,5 +1,5 @@
 import AboutImage from "@/components/about-image";
-import ContactButton from "@/components/contact";
+import ContactButtons from "@/components/contact-menu";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         in designing things with passion in order to solve problems correctly
         with usability and aesthetics in mind.
       </p>
-      <ContactButton />
+      <ContactButtons />
     </div>
   );
 }

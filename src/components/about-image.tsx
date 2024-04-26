@@ -3,7 +3,7 @@
 import { motion, useAnimate, useInView } from "framer-motion";
 import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
-import { Skeleton } from "./ui/skeleton";
+import ImageSkeleton from "./skelly-image";
 
 export default function AboutImage() {
   const [loading, setLoading] = useState(true);
@@ -23,14 +23,14 @@ export default function AboutImage() {
         animate={{ opacity: [0, 100] }}
       />
       <CldImage
-        ref={scope}
-        id="meBruv"
-        onLoad={() => setLoading(false)}
         className={
           loading
             ? "hidden"
             : "mx-1 rounded max-[400px]:m-0 min-[400px]:w-[300px]"
         }
+        onLoad={() => setLoading(false)}
+        ref={scope}
+        id="meBruv"
         width="900"
         height="900"
         zoom="0.9"
@@ -39,9 +39,7 @@ export default function AboutImage() {
         alt="me"
         priority
       />
-      {loading ? (
-        <Skeleton className="mx-1 aspect-square size-full rounded bg-accent max-[400px]:m-0 min-[400px]:size-[300px]" />
-      ) : null}
+      {loading ? (<ImageSkeleton size={300} />) : null}
       <motion.div
         className="w-full rounded bg-gradient-to-r from-secondary max-[400px]:hidden"
         animate={{ opacity: [0, 100] }}

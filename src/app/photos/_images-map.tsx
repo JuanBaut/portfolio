@@ -1,9 +1,10 @@
 "use client";
 
+import ImageSkeleton from "@/components/skelly-image";
 import { ImageType } from "@/lib/image-types";
 import { useAnimate, useInView } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface PropsImages {
   images: ImageType[];
@@ -11,6 +12,7 @@ interface PropsImages {
 
 export default function ImagesMap(props: PropsImages) {
   const { images } = props;
+  const [loading, setLoading] = useState(true);
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
 
@@ -29,13 +31,19 @@ export default function ImagesMap(props: PropsImages) {
           className="aspect-square w-[380px] overflow-hidden rounded"
         >
           <Image
-            className="h-full rounded object-cover"
+            className={
+              loading
+                ? "hidden"
+                : "h-full rounded-lg object-cover"
+            }
             height={item.height}
             width={item.width}
             src={item.url}
             alt="photo"
+            onLoad={() => setLoading(false)}
             priority
           />
+          {loading ? (<ImageSkeleton size={500} />) : null}
         </div>
       ))}
     </div>

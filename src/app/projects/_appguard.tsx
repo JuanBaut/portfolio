@@ -10,6 +10,7 @@ export default function AppGuard() {
         <div className="flex flex-col gap-2">
           <CardTitle className="flex items-center gap-2">
             <p className="mr-auto">AppGuard</p>
+
             <a
               href="https://app-guard-front.vercel.app/"
               target="_blank"
