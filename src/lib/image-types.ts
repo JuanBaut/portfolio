@@ -1,4 +1,4 @@
-export interface DataTypes {
+export interface ImagesObjectType {
   asset_id: string;
   public_id: string;
   folder: string;
@@ -24,3 +24,21 @@ export interface DataTypes {
   created_by: object;
   uploaded_by: object;
 }
+
+export type ResponseType =
+  | {
+      url: string;
+      id: string;
+      title: string;
+      width: number;
+      height: number;
+    }[]
+  | "Error fetching the images";
+
+export type ImageType = {
+  url: string;
+  id: string;
+  title: string;
+  width: number;
+  height: number;
+};

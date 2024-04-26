@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import Navbar from "../components/navbar";
 import "./globals.css";
+import ContactMenu from "@/components/contact-menu";
 
 const martian = Work_Sans({ subsets: ["latin"] });
 
@@ -20,6 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          id="metaThemeColor"
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="#05090a"
+        />
+        <meta
+          id="metaThemeColor"
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="#f5f9fa"
+        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -48,6 +61,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <ContactMenu />
         </ThemeProvider>
         <SpeedInsights />
       </body>

@@ -54,6 +54,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -75,11 +76,16 @@
   }
 
   .gradient {
-    background: linear-gradient(90deg, accent, secondary);
+    background: linear-gradient(90deg);
     background-size: 200% 200%;
   }
 
   .element-to-rotate {
     animation: gradientChange 4s ease infinite;
+  }
+
+  .icon-color {
+    background: linear-gradient(90deg);
+    background-size: 200% 200%;
   }
 }
