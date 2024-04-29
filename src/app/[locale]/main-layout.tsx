@@ -2,7 +2,7 @@ import ContactMenu from "@/components/contact-menu";
 import Navbar from "@/components/navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
-import SubLayout from "./[locale]/client/layout";
+import SubLayout from "./client/layout";
 
 type Props = {
   children: React.ReactNode;
