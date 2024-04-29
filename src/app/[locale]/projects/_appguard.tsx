@@ -12,8 +12,7 @@ export default function AppGuard() {
       />
 
       <div className="pt-2 text-sm text-muted">
-        Website / E-commerce built around selling event tickets in argentinian
-        beaches, like sports and cultural events.
+        Website / E-commerce built around selling event tickets in argentinian beaches, like sports and cultural events.
         <ul className="list-disc px-8 pt-2">
           <li>It was my first deep dive in Git Flow</li>
           <li>Developing a project with multiple people</li>

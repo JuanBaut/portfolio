@@ -15,53 +15,19 @@ export default function ContactMenu() {
       <hr />
       <div>
         <div className="mx-auto flex w-[300px] justify-center gap-2 pt-2 max-[520px]:hidden">
-          <ButtonHorizontal
-            href={github}
-            text="Github"
-            icon={<Github className={iconStyles} />}
-          />
-          <ButtonHorizontal
-            href={resume}
-            text="Resume"
-            icon={<Paperclip className={iconStyles} />}
-          />
-          <ButtonHorizontal
-            href={email}
-            text="Email"
-            icon={<Mail className={iconStyles} />}
-          />
-          <ButtonHorizontal
-            href={linkedin}
-            text="LinkedIn"
-            icon={<LinkedinIcon className={iconStyles} />}
-          />
+          <ButtonHorizontal href={github} text="Github" icon={<Github className={iconStyles} />} />
+          <ButtonHorizontal href={resume} text="Resume" icon={<Paperclip className={iconStyles} />} />
+          <ButtonHorizontal href={email} text="Email" icon={<Mail className={iconStyles} />} />
+          <ButtonHorizontal href={linkedin} text="LinkedIn" icon={<LinkedinIcon className={iconStyles} />} />
         </div>
         <div className="m-auto flex flex-col justify-center gap-2 px-[10%] py-4 min-[350px]:px-[20%] min-[520px]:hidden">
-          <ButtonVertical
-            href={github}
-            text="Github"
-            icon={<Github className={iconStyles} />}
-          />
-          <ButtonVertical
-            href={resume}
-            text="Resume"
-            icon={<Paperclip className={iconStyles} />}
-          />
-          <ButtonVertical
-            href={email}
-            text="Email"
-            icon={<Mail className={iconStyles} />}
-          />
-          <ButtonVertical
-            href={linkedin}
-            text="LinkedIn"
-            icon={<LinkedinIcon className={iconStyles} />}
-          />
+          <ButtonVertical href={github} text="Github" icon={<Github className={iconStyles} />} />
+          <ButtonVertical href={resume} text="Resume" icon={<Paperclip className={iconStyles} />} />
+          <ButtonVertical href={email} text="Email" icon={<Mail className={iconStyles} />} />
+          <ButtonVertical href={linkedin} text="LinkedIn" icon={<LinkedinIcon className={iconStyles} />} />
         </div>
       </div>
-      <p className="pt-2 text-center text-sm text-muted">
-        All rights reserved · 2024
-      </p>
+      <p className="pt-2 text-center text-sm text-muted">All rights reserved · 2024</p>
     </div>
   );
 }

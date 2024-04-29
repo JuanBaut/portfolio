@@ -3,10 +3,7 @@
 import NavbarMobile from "@/components/navbar-mobile";
 import ModeToggle from "@/components/theme-switch";
 import { Badge } from "@/components/ui/badge";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -27,10 +24,7 @@ export default function Navbar() {
                   about
                 </Badge>
               ) : (
-                <Badge
-                  className="border-transparent text-sm font-normal"
-                  variant={"outline"}
-                >
+                <Badge className="border-transparent text-sm font-normal" variant={"outline"}>
                   about
                 </Badge>
               )}
@@ -42,10 +36,7 @@ export default function Navbar() {
                   projects
                 </Badge>
               ) : (
-                <Badge
-                  className="border-transparent text-sm font-normal"
-                  variant={"outline"}
-                >
+                <Badge className="border-transparent text-sm font-normal" variant={"outline"}>
                   projects
                 </Badge>
               )}
@@ -57,10 +48,7 @@ export default function Navbar() {
                   photos
                 </Badge>
               ) : (
-                <Badge
-                  className="border-transparent text-sm font-normal"
-                  variant={"outline"}
-                >
+                <Badge className="border-transparent text-sm font-normal" variant={"outline"}>
                   photos
                 </Badge>
               )}

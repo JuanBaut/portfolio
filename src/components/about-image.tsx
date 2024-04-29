@@ -23,11 +23,7 @@ export default function AboutImage() {
         animate={{ opacity: [0, 100] }}
       />
       <CldImage
-        className={
-          loading
-            ? "hidden"
-            : "mx-1 rounded max-[400px]:m-0 min-[400px]:w-[300px]"
-        }
+        className={loading ? "hidden" : "mx-1 rounded max-[400px]:m-0 min-[400px]:w-[300px]"}
         onLoad={() => setLoading(false)}
         ref={scope}
         id="meBruv"
@@ -39,7 +35,7 @@ export default function AboutImage() {
         alt="me"
         priority
       />
-      {loading ? (<ImageSkeleton size={300} />) : null}
+      {loading ? <ImageSkeleton size={300} /> : null}
       <motion.div
         className="w-full rounded bg-gradient-to-r from-secondary max-[400px]:hidden"
         animate={{ opacity: [0, 100] }}

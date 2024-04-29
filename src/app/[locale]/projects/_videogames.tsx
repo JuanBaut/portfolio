@@ -5,15 +5,11 @@ import { Card } from "@/components/ui/card";
 export default function VideogamesApp() {
   return (
     <Card className="mb-4 border-primary p-2">
-      <ProjectTitle
-        name="Videogames App"
-        repository="https://github.com/JuanBaut/videogames-pi"
-      />
+      <ProjectTitle name="Videogames App" repository="https://github.com/JuanBaut/videogames-pi" />
 
       <div className="pt-2 text-sm text-muted">
-        Wiki / Pokedex styled website with a videogame thematic. The main
-        dynamic is to look up, sort and filter videogames and interact with them
-        as cards.
+        Wiki / Pokedex styled website with a videogame thematic. The main dynamic is to look up, sort and filter
+        videogames and interact with them as cards.
         <ul className="list-disc px-8 pt-2">
           <li>First React.js SPA</li>
           <li>Front-end and Back-end skills put together</li>

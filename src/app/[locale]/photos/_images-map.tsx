@@ -26,16 +26,9 @@ export default function ImagesMap(props: PropsImages) {
   return (
     <div ref={scope} className="flex size-full flex-wrap justify-center gap-4">
       {images.map((item) => (
-        <div
-          key={item.id}
-          className="aspect-square w-[380px] overflow-hidden rounded"
-        >
+        <div key={item.id} className="aspect-square w-[380px] overflow-hidden rounded">
           <Image
-            className={
-              loading
-                ? "hidden"
-                : "h-full rounded-lg object-cover"
-            }
+            className={loading ? "hidden" : "h-full rounded-lg object-cover"}
             height={item.height}
             width={item.width}
             src={item.url}
@@ -43,7 +36,7 @@ export default function ImagesMap(props: PropsImages) {
             onLoad={() => setLoading(false)}
             priority
           />
-          {loading ? (<ImageSkeleton size={500} />) : null}
+          {loading ? <ImageSkeleton size={500} /> : null}
         </div>
       ))}
     </div>
