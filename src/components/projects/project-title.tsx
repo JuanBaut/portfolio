@@ -6,7 +6,7 @@ import { CardTitle } from "../ui/card";
 interface LinkProps {
   name: string;
   website?: string;
-  repository: string;
+  repository?: string;
 }
 
 export default function ProjectTitle(props: LinkProps) {
@@ -23,12 +23,14 @@ export default function ProjectTitle(props: LinkProps) {
               </Button>
             </NoKbdLink>
           ) : null}
-          <NoKbdLink href={props.repository}>
-            <Button size={"xs"} variant={"special_sm"}>
-              Code
-              <Code className="ml-2 size-4" />
-            </Button>
-          </NoKbdLink>
+          {props.repository ? (
+            <NoKbdLink href={props.repository}>
+              <Button size={"xs"} variant={"special_sm"}>
+                Code
+                <Code className="ml-2 size-4" />
+              </Button>
+            </NoKbdLink>
+          ) : null}
         </div>
       </CardTitle>
       <hr />

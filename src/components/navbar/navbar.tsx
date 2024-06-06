@@ -1,11 +1,15 @@
 "use client";
 
-import NavbarMobile from "@/components/navbar-mobile";
-import ModeToggle from "@/components/theme-switch";
+import NavbarMobile from "@/components/navbar/navbar-mobile";
+import ThemeSwitch from "@/components/navbar/theme-switch";
 import { Badge } from "@/components/ui/badge";
-import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import LocaleSwitch from "./locale-switch";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -15,7 +19,8 @@ export default function Navbar() {
       <NavigationMenu className="mx-auto w-[90%] sm:w-[640px] md:w-[640px] lg:w-[640px] xl:w-[640px] 2xl:w-[640px]">
         <NavigationMenuList className="flex justify-between">
           <div className="my-auto flex gap-2">
-            <ModeToggle />
+            <ThemeSwitch />
+            <LocaleSwitch />
           </div>
           <div className="flex gap-2 max-[485px]:hidden">
             <Link href={"/"}>
@@ -24,7 +29,10 @@ export default function Navbar() {
                   about
                 </Badge>
               ) : (
-                <Badge className="border-transparent text-sm font-normal" variant={"outline"}>
+                <Badge
+                  className="border-transparent text-sm font-normal"
+                  variant={"outline"}
+                >
                   about
                 </Badge>
               )}
@@ -36,7 +44,10 @@ export default function Navbar() {
                   projects
                 </Badge>
               ) : (
-                <Badge className="border-transparent text-sm font-normal" variant={"outline"}>
+                <Badge
+                  className="border-transparent text-sm font-normal"
+                  variant={"outline"}
+                >
                   projects
                 </Badge>
               )}
@@ -48,7 +59,10 @@ export default function Navbar() {
                   photos
                 </Badge>
               ) : (
-                <Badge className="border-transparent text-sm font-normal" variant={"outline"}>
+                <Badge
+                  className="border-transparent text-sm font-normal"
+                  variant={"outline"}
+                >
                   photos
                 </Badge>
               )}

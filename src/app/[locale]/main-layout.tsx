@@ -1,5 +1,5 @@
 import ContactMenu from "@/components/contact-menu";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
 import SubLayout from "./client/layout";
@@ -12,7 +12,12 @@ type Props = {
 export default function MainLayout({ children, locale }: Readonly<Props>) {
   return (
     <>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         <SubLayout params={{ locale }}>
           <Navbar />
         </SubLayout>

@@ -3,7 +3,7 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Badge } from "./ui/badge";
+import { Badge } from "../ui/badge";
 import { Menu } from "lucide-react";
 
 export default function NavbarMobile() {
@@ -22,7 +22,10 @@ export default function NavbarMobile() {
                 about
               </Badge>
             ) : (
-              <Badge className="text-md border-transparent font-normal" variant={"outline"}>
+              <Badge
+                className="text-md border-transparent font-normal"
+                variant={"outline"}
+              >
                 about
               </Badge>
             )}
@@ -34,7 +37,10 @@ export default function NavbarMobile() {
                 projects
               </Badge>
             ) : (
-              <Badge className="text-md border-transparent font-normal" variant={"outline"}>
+              <Badge
+                className="text-md border-transparent font-normal"
+                variant={"outline"}
+              >
                 projects
               </Badge>
             )}
@@ -46,7 +52,10 @@ export default function NavbarMobile() {
                 photos
               </Badge>
             ) : (
-              <Badge className="text-md border-transparent font-normal" variant={"outline"}>
+              <Badge
+                className="text-md border-transparent font-normal"
+                variant={"outline"}
+              >
                 photos
               </Badge>
             )}
