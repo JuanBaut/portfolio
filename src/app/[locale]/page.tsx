@@ -1,17 +1,19 @@
-import { getI18n } from "@/locales/server";
+import Footer from "@/components/footer";
+import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
 
-export default async function Home() {
-  const t = await getI18n();
-
+export default function Component() {
   return (
-    <div className="mx-auto w-[95%] px-2 min-[640px]:w-[640px]">
-      <p className="pt-4 text-xl">
-        Juan <b>Andres</b> Bautista
-      </p>
-      <p className="pt-1 text-justify text-muted">{t("description")}</p>
-      <p className="pt-1 text-center text-muted">
-        <i>{t("languages")}</i>
-      </p>
+    <div className="flex min-h-[100dvh] flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <Hero />
+        <Projects />
+        <Skills />
+      </main>
+      <Footer />
     </div>
   );
 }
