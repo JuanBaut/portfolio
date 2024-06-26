@@ -24,9 +24,6 @@ export default function RootLayout({ children, params: { locale } }: Readonly<Pr
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta id="metaThemeColor" name="theme-color" media="(prefers-color-scheme: dark)" content="#05090a" />
-        <meta id="metaThemeColor" name="theme-color" media="(prefers-color-scheme: light)" content="#f5f9fa" />
-
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -35,6 +32,7 @@ export default function RootLayout({ children, params: { locale } }: Readonly<Pr
       <body className={martian.className}>
         <MainLayout locale={locale}>{children}</MainLayout>
       </body>
+      <span>hello reddit and github</span>
     </html>
   );
 }
