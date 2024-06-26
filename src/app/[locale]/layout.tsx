@@ -4,7 +4,7 @@ import React from "react";
 import "./globals.css";
 import MainLayout from "./main-layout";
 
-const martian = Work_Sans({ subsets: ["latin"] });
+const font = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andres Bautista",
@@ -29,7 +29,7 @@ export default function RootLayout({ children, params: { locale } }: Readonly<Pr
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={martian.className}>
+      <body className={font.className}>
         <MainLayout locale={locale}>{children}</MainLayout>
       </body>
       <span>hello reddit and github</span>

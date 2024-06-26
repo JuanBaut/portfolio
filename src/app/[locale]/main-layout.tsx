@@ -1,8 +1,5 @@
-import ContactMenu from "@/components/contact-menu";
-import Navbar from "@/components/navbar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "next-themes";
-import SubLayout from "./client/layout";
 
 type Props = {
   children: React.ReactNode;
@@ -13,11 +10,9 @@ export default function MainLayout({ children, locale }: Readonly<Props>) {
   return (
     <>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-        <SubLayout params={{ locale }}>
-          <Navbar />
-        </SubLayout>
+        {/*<SubLayout params={{ locale }}>*/}
+        {/*</SubLayout>*/}
         {children}
-        <ContactMenu />
       </ThemeProvider>
       <SpeedInsights />
     </>

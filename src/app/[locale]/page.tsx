@@ -1,4 +1,3 @@
-import AboutImage from "@/components/about-image";
 import { getI18n } from "@/locales/server";
 
 export default async function Home() {
@@ -6,7 +5,6 @@ export default async function Home() {
 
   return (
     <div className="mx-auto w-[95%] px-2 min-[640px]:w-[640px]">
-      <AboutImage />
       <p className="pt-4 text-xl">
         Juan <b>Andres</b> Bautista
       </p>
