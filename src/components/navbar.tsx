@@ -1,16 +1,16 @@
-import { MountainIcon } from "lucide-react";
+import { CodeXml } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="flex h-14 items-center px-4 lg:px-6">
+    <header className="fixed flex h-14 w-full items-center border-b border-b-muted px-4 backdrop-blur lg:px-6">
       <Link
         href="#"
         className="flex items-center justify-center"
         prefetch={false}
       >
-        <MountainIcon className="h-6 w-6" />
-        <span className="sr-only">John Doe</span>
+        <CodeXml className="size-6" />
+        <span className="sr-only">Juan Andres Bautista</span>
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <Link

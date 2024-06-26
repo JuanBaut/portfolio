@@ -9,26 +9,15 @@ export default async function Hero() {
       <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col justify-center space-y-4">
           <div className="space-y-2">
-            <div className="mx-auto w-[95%] px-2 min-[640px]:w-[640px]">
-              <p className="pt-4 text-xl">
-                Juan <b>Andres</b> Bautista
-              </p>
-              <p className="pt-1 text-justify text-muted">{t("description")}</p>
-              <p className="pt-1 text-center text-muted">
-                <i>{t("languages")}</i>
-              </p>
-            </div>
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-              John Doe
+              Juan Andres Bautista
             </h1>
             <h2 className="text-xl font-bold tracking-tighter text-muted-foreground sm:text-3xl">
               Full-Stack Developer
             </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
-              I'm a passionate full-stack developer with a strong background in
-              building modern web applications. I specialize in JavaScript,
-              React, and Node.js, and I'm always eager to learn new
-              technologies.
+              {t("description")}
+              <i> {t("languages")}</i>
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
