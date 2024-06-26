@@ -1,3 +1,4 @@
+import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
@@ -12,6 +13,7 @@ export default function Component() {
         <Hero />
         <Projects />
         <Skills />
+        <Contact />
       </main>
       <Footer />
     </div>

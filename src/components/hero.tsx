@@ -12,10 +12,10 @@ export default async function Hero() {
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
               Juan Andres Bautista
             </h1>
-            <h2 className="text-xl font-bold tracking-tighter text-muted-foreground sm:text-3xl">
+            <h2 className="text-xl font-bold tracking-tighter sm:text-3xl">
               Full-Stack Developer
             </h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl">
+            <p className="max-w-[600px] text-muted md:text-xl">
               {t("description")}
               <i> {t("languages")}</i>
             </p>
@@ -42,7 +42,7 @@ export default async function Hero() {
           width="550"
           height="550"
           alt="Hero"
-          className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full"
+          className="mx-auto aspect-square border overflow-hidden rounded-xl object-cover sm:w-full"
         />
       </div>
     </section>
