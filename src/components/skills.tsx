@@ -1,16 +1,16 @@
+import { Badge } from "./ui/badge";
+
 export default function Skills() {
   return (
     <section id="skills" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-              Skills
-            </div>
+            <Badge variant={"header"}>Skills</Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               Technologies I Work With
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               I have experience with a wide range of technologies and
               frameworks.
             </p>
@@ -25,7 +25,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">React</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A JavaScript library for building user interfaces.
                   </p>
                 </div>
@@ -33,7 +33,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Next.js</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A React framework for building server-rendered applications.
                   </p>
                 </div>
@@ -41,7 +41,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Tailwind CSS</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A utility-first CSS framework for rapidly building custom
                     designs.
                   </p>
@@ -57,7 +57,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Node.js</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A JavaScript runtime built on Chrome's V8 JavaScript engine.
                   </p>
                 </div>
@@ -65,7 +65,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Express.js</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A minimal and flexible Node.js web application framework.
                   </p>
                 </div>
@@ -73,7 +73,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">MongoDB</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A NoSQL database for storing and retrieving data.
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Git</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A distributed version control system for tracking changes in
                     source code.
                   </p>
@@ -97,7 +97,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Docker</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A platform for building, deploying, and running applications
                     in containers.
                   </p>
@@ -106,7 +106,7 @@ export default function Skills() {
               <li>
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">AWS</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted">
                     A cloud computing platform that offers a wide range of
                     services.
                   </p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Badge } from "./ui/badge";
 
 export default function Projects() {
   return (
@@ -9,13 +10,11 @@ export default function Projects() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-              Featured Projects
-            </div>
+            <Badge variant={"header"}>Featured Projects</Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               My Recent Work
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Check out some of the projects I've been working on recently.
             </p>
           </div>
@@ -31,7 +30,7 @@ export default function Projects() {
             />
             <div className="space-y-2">
               <h3 className="text-xl font-bold">Project 1</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted">
                 A modern web application built with React, Node.js, and MongoDB.
               </p>
               <div className="flex gap-2">
@@ -62,7 +61,7 @@ export default function Projects() {
             />
             <div className="space-y-2">
               <h3 className="text-xl font-bold">Project 2</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted">
                 A responsive e-commerce website built with Next.js and Tailwind
                 CSS.
               </p>

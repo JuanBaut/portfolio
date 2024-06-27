@@ -42,7 +42,7 @@ export default async function Hero() {
           width="550"
           height="550"
           alt="Hero"
-          className="mx-auto aspect-square border overflow-hidden rounded-xl object-cover sm:w-full"
+          className="mx-auto aspect-square overflow-hidden rounded-xl border object-cover sm:w-full"
         />
       </div>
     </section>
