@@ -15,19 +15,13 @@ export default function Projects() {
               My Recent Work
             </h2>
             <p className="max-w-[900px] text-muted md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Check out some of the projects I've been working on recently.
+              Check out some of the projects I&apos;ve been working on recently.
             </p>
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
           <div className="flex flex-col justify-center space-y-4">
-            <img
-              src="/placeholder.svg"
-              width="550"
-              height="310"
-              alt="Project"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-            />
+            <div className="border mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full" />
             <div className="space-y-2">
               <h3 className="text-xl font-bold">Project 1</h3>
               <p className="text-muted">
@@ -52,13 +46,7 @@ export default function Projects() {
             </div>
           </div>
           <div className="flex flex-col justify-center space-y-4">
-            <img
-              src="/placeholder.svg"
-              width="550"
-              height="310"
-              alt="Project"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-            />
+            <div className="border mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full" />
             <div className="space-y-2">
               <h3 className="text-xl font-bold">Project 2</h3>
               <p className="text-muted">

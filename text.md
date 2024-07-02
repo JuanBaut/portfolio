@@ -1,8 +1,10 @@
 #Apguard
 Website / E-commerce built around selling event tickets in argentinian beaches, like sports and cultural events.
+
 - It was my first deep dive in Git Flow
 - Developing a project with multiple people
 - Front-end leading role
+
 ```html
     <Badge>TS</Badge>
     <Badge>React</Badge>
@@ -19,9 +21,11 @@ Website / E-commerce built around selling event tickets in argentinian beaches, 
 #Videogames app
 Wiki / Pokedex styled website with a videogame thematic. The main dynamic is to look up, sort and filter
 videogames and interact with them as cards.
+
 - First React.js SPA
 - Front-end and Back-end skills put together
 - Following guidelines from client request
+
 ```html
     <Badge>JS</Badge>
     <Badge>React</Badge>
@@ -34,12 +38,13 @@ videogames and interact with them as cards.
 
 #Portfolio
 The website you are currently looking at.
+
 ```html
-    <Badge>TS</Badge>
-    <Badge>Next.js</Badge>
-    <Badge>Tailwind</Badge>
-    <Badge>Shadcn/ui</Badge>
-    <Badge>Framer motion</Badge>
+<Badge>TS</Badge>
+<Badge>Next.js</Badge>
+<Badge>Tailwind</Badge>
+<Badge>Shadcn/ui</Badge>
+<Badge>Framer motion</Badge>
 ```
 
 #Dotfiles

@@ -1,17 +1,17 @@
-import { CodeXml } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   return (
     <header className="fixed flex h-14 w-full items-center border-b border-b-muted px-4 backdrop-blur lg:px-6">
-      <Link
-        href="#"
-        className="flex items-center justify-center"
-        prefetch={false}
-      >
-        <CodeXml className="size-6" />
-        <span className="sr-only">Juan Andres Bautista</span>
-      </Link>
+      <div className="flex gap-4 items-center justify-center">
+        <Link href="#" prefetch={false}>
+          <span className="font-bold text-2xl">/a</span>
+          <span className="sr-only">Juan Andres Bautista</span>
+        </Link>
+        <ThemeToggle />
+      </div>
+
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <Link
           href="#projects"
