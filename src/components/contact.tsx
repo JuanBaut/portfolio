@@ -20,7 +20,7 @@ export default function Contact() {
           </div>
           <div className="mx-auto w-full max-w-sm space-y-2">
             <p className="text-xs text-muted">
-              I'll get back to you as soon as possible. place some buttons here
+              I&apos;ll get back to you as soon as possible. place some buttons here
             </p>
           </div>
         </div>

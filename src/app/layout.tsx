@@ -1,31 +1,21 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import React from "react";
 import "./globals.css";
-import MainLayout from "./main-layout";
 
-const font = Inter({ weight: "variable", subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andres Bautista",
-  description: "I like building stuff.",
-};
-
-export async function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "es" }, { locale: "de" }];
-}
-
-type Props = {
-  children: React.ReactNode;
-  params: { locale: string };
+  description: "Web developer",
 };
 
 export default function RootLayout({
   children,
-  params: { locale },
-}: Readonly<Props>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -46,9 +36,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={font.className}>
-        <MainLayout locale={locale}>{children}</MainLayout>
-      </body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

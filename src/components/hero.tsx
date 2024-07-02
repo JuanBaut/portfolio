@@ -1,8 +1,7 @@
-import { getI18n } from "@/locales/server";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Hero() {
-  const t = await getI18n();
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
@@ -16,8 +15,8 @@ export default async function Hero() {
               Full-Stack Developer
             </h2>
             <p className="max-w-[600px] text-muted md:text-xl">
-              {t("description")}
-              <i> {t("languages")}</i>
+              t("description")
+              <i> t("languages")</i>
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -37,7 +36,7 @@ export default async function Hero() {
             </Link>
           </div>
         </div>
-        <img
+        <Image
           src="/placeholder.svg"
           width="550"
           height="550"
