@@ -58,7 +58,8 @@ export default function Skills() {
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Node.js</h3>
                   <p className="text-muted">
-                    A JavaScript runtime built on Chrome's V8 JavaScript engine.
+                    A JavaScript runtime built on Chrome&apos;s V8 JavaScript
+                    engine.
                   </p>
                 </div>
               </li>
