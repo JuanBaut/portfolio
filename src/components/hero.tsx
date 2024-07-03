@@ -1,8 +1,9 @@
 import Link from "next/link";
+import ImgContainer from "./img-container";
 
 export default async function Hero() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full py-20 md:py-24 lg:py-32">
       <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col justify-center space-y-4">
           <div className="space-y-4">
@@ -36,6 +37,7 @@ export default async function Hero() {
             </Link>
           </div>
         </div>
+        <ImgContainer src="portfolio/me6" />
       </div>
     </section>
   );

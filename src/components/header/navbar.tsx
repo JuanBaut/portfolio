@@ -3,8 +3,8 @@ import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   return (
-    <header className="fixed flex w-full justify-center p-4">
-      <div className="flex h-12 min-w-[320px] rounded-lg items-center border bg-secondary/20 backdrop-blur-lg px-4">
+    <header className="fixed z-50 flex w-full justify-center p-4">
+      <div className="flex h-12 min-w-[320px] rounded-lg items-center border bg-secondary/30 backdrop-blur-lg px-4">
         <div className="flex gap-2 items-center justify-center">
           <Link href="#" prefetch={false}>
             <span className="font-bold text-2xl">/a</span>

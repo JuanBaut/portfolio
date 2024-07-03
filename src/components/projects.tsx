@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Badge } from "./ui/badge";
+import ImgContainer from "./img-container";
 
 export default function Projects() {
   return (
@@ -21,8 +22,8 @@ export default function Projects() {
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
           <div className="flex flex-col justify-center space-y-4">
-            <div className="border mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full" />
             <div className="space-y-2">
+              <ImgContainer src="projects/expresstrack" />
               <h3 className="text-xl font-bold">Project 1</h3>
               <p className="text-muted">
                 A modern web application built with React, Node.js, and MongoDB.
@@ -46,8 +47,8 @@ export default function Projects() {
             </div>
           </div>
           <div className="flex flex-col justify-center space-y-4">
-            <div className="border mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full" />
             <div className="space-y-2">
+              <ImgContainer src="projects/pixelstream" />
               <h3 className="text-xl font-bold">Project 2</h3>
               <p className="text-muted">
                 A responsive e-commerce website built with Next.js and Tailwind
