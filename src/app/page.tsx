@@ -1,20 +1,23 @@
-import AboutImage from "@/components/about-image";
+import Navbar from "@/components/header/navbar";
+import Contact from "../components/contact/contact";
+import Footer from "../components/footer";
+import Hero from "../components/hero";
+import Projects from "../components/projects/projects";
+import Skills from "../components/skills/skills";
+import Experience from "@/components/experience/experience";
 
-export default function Home() {
+export default function Component() {
   return (
-    <div className="mx-auto w-[95%] px-2 min-[640px]:w-[640px]">
-      <AboutImage />
-      <p className="pt-4 text-xl">
-        Juan <b>Andres</b> Bautista
-      </p>
-      <p className="pt-1 text-justify text-muted">
-        I am a full-stack web developer. Born and based in Colombia. I believe
-        in designing things with passion in order to solve problems correctly
-        with usability and aesthetics in mind.
-      </p>
-      <p className="pt-1 text-center text-muted">
-        <i>C1 English · A2 German · Native Spanish</i>
-      </p>
+    <div className="flex min-h-[100dvh] flex-col">
+      <Navbar />
+      <main className="flex-1">
+        <Hero />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

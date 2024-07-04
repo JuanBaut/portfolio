@@ -1,16 +1,15 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
-import Navbar from "../components/navbar";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import ContactMenu from "@/components/contact-menu";
+import { Sublayout } from "./sublayout";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const martian = Work_Sans({ subsets: ["latin"] });
+const font = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andres Bautista",
-  description: "I like building stuff.",
+  description: "Web developer",
 };
 
 export default function RootLayout({
@@ -19,20 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <head>
-        <meta
-          id="metaThemeColor"
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="#05090a"
-        />
-        <meta
-          id="metaThemeColor"
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="#f5f9fa"
-        />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -52,18 +39,17 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={martian.className}>
-        <ThemeProvider
+      <body className={font.className}>
+        <Sublayout
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
           {children}
-          <ContactMenu />
-        </ThemeProvider>
-        <SpeedInsights />
+          <Analytics />
+          <SpeedInsights />
+        </Sublayout>
       </body>
     </html>
   );
