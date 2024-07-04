@@ -6,7 +6,7 @@ import { useRef } from "react";
 export function HeaderMotion() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    margin: "-210px 0px -210px 0px",
+    margin: "210px 0px 210px 0px",
   });
 
   const words = "Juan Andres Bautista";

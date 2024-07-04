@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <LayoutMotion
       id="projects"
-      className="w-full bg-primary/10 py-12 md:py-24 lg:py-32"
+      className="w-full bg-primary/10 py-20 md:py-24 lg:py-32"
     >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -15,7 +15,7 @@ export default function Projects() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               My Recent Work
             </h2>
-            <p className="max-w-[900px] text-muted md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[624px] text-muted md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Check out some of the projects I&apos;ve been working on recently.
               From newest to oldest.
             </p>

@@ -1,12 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import LayoutMotion from "../motion/layout-motion";
 import ExperienceCard from "./experience-card";
+import Link from "next/link";
 
 export default function Experience() {
   return (
     <LayoutMotion
       id="experience"
-      className="w-full bg-muted/10 py-12 md:py-24 lg:py-32"
+      className="w-full bg-muted/10 py-20 md:py-24 lg:py-32"
     >
       <div className="w-full grid gap-8 max-w-[700px] mx-auto">
         <div className="flex flex-col items-center justify-center space-y-2 text-center">
@@ -130,7 +131,10 @@ export default function Experience() {
             kind="Personal"
             description={
               <span>
-                You are currently in v2. Checkout v1 <u>here.</u>
+                You are currently looking at v2. Checkout v1{" "}
+                <Link href={"https://v1.andres.contact"} className="underline">
+                  here.
+                </Link>
               </span>
             }
           >
