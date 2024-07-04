@@ -3,9 +3,24 @@
 import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
+
+  const getCssVariableValue = (variable: string): string => {
+    const rootStyles = getComputedStyle(document.documentElement);
+    return rootStyles.getPropertyValue(variable).trim();
+  };
+
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    const bgColor = getCssVariableValue("--background");
+    console.log(bgColor);
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", bgColor);
+    }
+  }, [theme]);
 
   const handleChangeTheme = () => {
     if (theme === "dark") {
