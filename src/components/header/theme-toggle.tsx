@@ -8,17 +8,13 @@ import { useEffect } from "react";
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
 
-  const getCssVariableValue = (variable: string): string => {
-    const rootStyles = getComputedStyle(document.documentElement);
-    return rootStyles.getPropertyValue(variable).trim();
-  };
-
   useEffect(() => {
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    const bgColor = getCssVariableValue("--background");
-    console.log(bgColor);
     if (metaThemeColor) {
-      metaThemeColor.setAttribute("content", bgColor);
+      metaThemeColor.setAttribute(
+        "content",
+        theme === "light" ? "#ebefee" : "#070908",
+      );
     }
   }, [theme]);
 
