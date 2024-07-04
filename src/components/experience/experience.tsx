@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import LayoutMotion from "../motion/layout-motion";
+import ExperienceCard from "./experience-card";
 
 export default function Experience() {
   return (
@@ -7,109 +8,89 @@ export default function Experience() {
       id="experience"
       className="w-full bg-muted/10 py-12 md:py-24 lg:py-32"
     >
-      <div className="w-full max-w-[700px] mx-auto">
-        <div className="grid gap-8">
-          <div className="grid gap-4">
-            <h2 className="text-3xl font-bold">My experience</h2>
-            <div className="grid gap-6">
-              <div className="grid gap-2">
-                <h3 className="text-xl font-semibold">Positions</h3>
-                <div className="grid gap-4">
-                  <div className="grid gap-2">
-                    <div className="flex items-center justify-between">
-                      <div className="font-medium">Software Engineer</div>
-                      <div className="text-sm text-muted-foreground">
-                        Jan 2021 - Present
-                      </div>
-                    </div>
-                    <div className="text-muted-foreground">
-                      Acme Inc, San Francisco
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">React</Badge>
-                      <Badge variant="secondary">TypeScript</Badge>
-                      <Badge variant="secondary">Node.js</Badge>
-                      <Badge variant="secondary">MongoDB</Badge>
-                    </div>
-                  </div>
-                  <div className="grid gap-2">
-                    <div className="flex items-center justify-between">
-                      <div className="font-medium">Frontend Developer</div>
-                      <div className="text-sm text-muted-foreground">
-                        Jun 2018 - Dec 2020
-                      </div>
-                    </div>
-                    <div className="text-muted-foreground">
-                      Globex Corporation, New York
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">React</Badge>
-                      <Badge variant="secondary">JavaScript</Badge>
-                      <Badge variant="secondary">CSS</Badge>
-                      <Badge variant="secondary">Webpack</Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="grid gap-2">
-                <h3 className="text-xl font-semibold">Freelance Projects</h3>
-                <div className="grid gap-4">
-                  <div className="grid gap-2">
-                    <div className="flex items-center justify-between">
-                      <div className="font-medium">E-commerce Website</div>
-                      <div className="text-sm text-muted-foreground">
-                        Mar 2022 - Jun 2022
-                      </div>
-                    </div>
-                    <div className="text-muted-foreground">
-                      Acme Retail, San Francisco
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Next.js</Badge>
-                      <Badge variant="secondary">Tailwind CSS</Badge>
-                      <Badge variant="secondary">Stripe</Badge>
-                      <Badge variant="secondary">Prisma</Badge>
-                    </div>
-                  </div>
-                  <div className="grid gap-2">
-                    <div className="flex items-center justify-between">
-                      <div className="font-medium">Mobile App Development</div>
-                      <div className="text-sm text-muted-foreground">
-                        Sep 2021 - Dec 2021
-                      </div>
-                    </div>
-                    <div className="text-muted-foreground">
-                      Globex Inc, New York
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">React Native</Badge>
-                      <Badge variant="secondary">Firebase</Badge>
-                      <Badge variant="secondary">Expo</Badge>
-                      <Badge variant="secondary">GraphQL</Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="grid gap-2">
-                <h3 className="text-xl font-semibold">Education</h3>
-                <div className="grid gap-4">
-                  <div className="grid gap-2">
-                    <div className="flex items-center justify-between">
-                      <div className="font-medium">
-                        Bachelor of Science in Computer Science
-                      </div>
-                      <div className="text-sm text-muted-foreground">
-                        2014 - 2018
-                      </div>
-                    </div>
-                    <div className="text-muted-foreground">
-                      University of California, Berkeley
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="w-full grid gap-8 max-w-[700px] mx-auto">
+        <div className="flex flex-col items-center justify-center space-y-2 text-center">
+          <Badge variant={"header"}>Experience</Badge>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+            Overview of all my work
+          </h2>
+          <hr />
+        </div>
+
+        <div className="grid gap-10 px-4">
+          <ExperienceCard
+            title="Pixel Stream"
+            type="Business Website"
+            kind="Freelance"
+            date="Mar 2024 - Ongoing"
+            description={<span>helo</span>}
+          >
+            <Badge>TS</Badge>
+            <Badge>React</Badge>
+            <Badge>Tailwind</Badge>
+            <Badge>Shadcn/ui</Badge>
+          </ExperienceCard>
+          <ExperienceCard
+            title="ExpressTrack"
+            type="WebApp"
+            kind="Freelance"
+            date="Mar 2024 - Jun 2024"
+            description={<span>helo</span>}
+          >
+            <Badge>TS</Badge>
+            <Badge>React</Badge>
+            <Badge>Tailwind</Badge>
+            <Badge>Leaflet.js</Badge>
+
+            <Badge variant={"secondary"}>MongoDB</Badge>
+            <Badge variant={"secondary"}>Express.js</Badge>
+          </ExperienceCard>
+          <ExperienceCard
+            title="AppGuard"
+            type="E-commerce"
+            kind="Academic"
+            date="Jan 2024 - Feb 2024"
+            description={
+              <span>
+                Built around selling event tickets in argentinian beaches, like
+                sports and cultural events.
+                <ul className="list-disc pl-4">
+                  <li>It was my first deep dive in Git Flow</li>
+                  <li>Developing a project with multiple people</li>
+                  <li>Front-end leading role</li>
+                </ul>
+              </span>
+            }
+          >
+            <Badge>TS</Badge>
+            <Badge>React</Badge>
+            <Badge>Redux</Badge>
+            <Badge>Tailwind</Badge>
+            <Badge variant={"secondary"}>PostgreSQL</Badge>
+            <Badge variant={"secondary"}>Express.js</Badge>
+          </ExperienceCard>
+          <ExperienceCard
+            title="Videogames App"
+            type="Wiki Website"
+            kind="Academic"
+            date="Nov 2023 - Dev 2023"
+            description={
+              <span>
+                The main dynamic is to look up, sort and filter videogames and
+                interact with them as cards.
+                <ul className="list-disc pl-4">
+                  <li>Frontend and Backend skills put together</li>
+                  <li>First React.js SPA</li>
+                </ul>
+              </span>
+            }
+          >
+            <Badge>JS</Badge>
+            <Badge>React</Badge>
+            <Badge>Redux</Badge>
+            <Badge variant={"secondary"}>PostgreSQL</Badge>
+            <Badge variant={"secondary"}>Express.js</Badge>
+          </ExperienceCard>
         </div>
       </div>
     </LayoutMotion>

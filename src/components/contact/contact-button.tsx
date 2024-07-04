@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 interface Props {
   href: string;
   name: string;
+  target?: "_self" | "_blank";
   icon: ReactElement;
   className?: string;
   variant?:
@@ -22,11 +23,12 @@ export default function ContactButton({
   icon,
   variant,
   className,
+  target = "_blank",
 }: Props) {
   return (
     <Link
       href={href}
-      target="_blank"
+      target={target}
       rel="nonreferrer"
       tabIndex={-1}
       prefetch={false}

@@ -5,7 +5,10 @@ import ContactButton from "./contact-button";
 
 export default function Contact() {
   return (
-    <LayoutMotion id="contact" className="w-full py-12 md:py-24 lg:py-32">
+    <LayoutMotion
+      id="contact"
+      className="min-h-[500px] w-full py-12 md:py-24 lg:py-32"
+    >
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">

@@ -24,12 +24,14 @@ export default async function Hero() {
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <ContactButton
+              target="_self"
               href="#contact"
               name="Contact Me"
               className="w-full px-10 min-[400px]:px-4"
               icon={<Contact2Icon />}
             />
             <ContactButton
+              target="_self"
               variant="outline"
               href="#projects"
               name="View Projects"
