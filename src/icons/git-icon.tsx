@@ -1,7 +1,11 @@
-export default function GitIcon() {
+interface Props {
+  className?: string;
+}
+
+export default function GitIcon({ className }: Props) {
   return (
     <svg
-      className="fill-muted"
+      className={className}
       viewBox="0 0 16 16"
       height="60"
       width="60"

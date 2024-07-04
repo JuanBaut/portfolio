@@ -1,7 +1,11 @@
-export default function NextjsIcon() {
+interface Props {
+  className?: string;
+}
+
+export default function NextjsIcon({ className }: Props) {
   return (
     <svg
-      className="fill-muted"
+      className={className}
       height="60"
       width="60"
       viewBox="0 0 24 24"

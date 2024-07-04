@@ -1,7 +1,11 @@
-export default function NodejsIcon() {
+interface Props {
+  className?: string;
+}
+
+export default function NodejsIcon({ className }: Props) {
   return (
     <svg
-      className="fill-muted"
+      className={className}
       viewBox="0 0 448 512"
       xmlns="http://www.w3.org/2000/svg"
       height="60"

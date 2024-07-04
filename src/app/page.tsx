@@ -1,9 +1,10 @@
 import Navbar from "@/components/header/navbar";
-import Contact from "../components/contact";
+import Contact from "../components/contact/contact";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
-import Projects from "../components/projects";
+import Projects from "../components/projects/projects";
 import Skills from "../components/skills/skills";
+import Experience from "@/components/experience/experience";
 
 export default function Component() {
   return (
@@ -13,6 +14,7 @@ export default function Component() {
         <Hero />
         <Projects />
         <Skills />
+        <Experience />
         <Contact />
       </main>
       <Footer />

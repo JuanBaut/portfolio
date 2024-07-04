@@ -1,7 +1,11 @@
-export default function TailwindIcon() {
+interface Props {
+  className?: string;
+}
+
+export default function TailwindIcon({ className }: Props) {
   return (
     <svg
-      className="fill-muted"
+      className={className}
       viewBox="0 0 24 24"
       height="68"
       width="68"

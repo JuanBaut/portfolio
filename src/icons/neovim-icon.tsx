@@ -1,9 +1,13 @@
-export default function NeovimIcon() {
+interface Props {
+  className?: string;
+}
+
+export default function NeovimIcon({ className }: Props) {
   return (
     <svg
+      className={className}
       height="60"
       width="60"
-      className="fill-muted"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >

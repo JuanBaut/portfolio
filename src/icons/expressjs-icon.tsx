@@ -1,10 +1,14 @@
-export default function ExpressjsIcon() {
+interface Props {
+  className?: string;
+}
+
+export default function ExpressjsIcon({ className }: Props) {
   return (
     <svg
+      className={className}
       width="68"
       height="68"
       viewBox="0 0 48 48"
-      className="fill-muted"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d="M23.697,37.56h1.18c0.84,0,1.631-0.392,2.139-1.061l7.485-9.847l7.485,9.847	c0.508,0.668,1.299,1.061,2.139,1.061h1.18L35.756,25l9.121-12h-1.18c-0.84,0-1.631,0.392-2.139,1.061L34.5,23.347l-7.059-9.287	C26.933,13.392,26.142,13,25.302,13h-1.18l9.121,12L23.697,37.56z"></path>

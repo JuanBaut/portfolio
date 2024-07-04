@@ -1,7 +1,11 @@
-export default function ReactIcon() {
+interface Props {
+  className?: string;
+}
+
+export default function ReactIcon({ className }: Props) {
   return (
     <svg
-      className="fill-muted"
+      className={className}
       width="68"
       height="68"
       viewBox="0 0 600 600"

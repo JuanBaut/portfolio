@@ -5,7 +5,7 @@ import NodejsIcon from "@/icons/nodejs-icon";
 import ReactIcon from "@/icons/react-icon";
 import TailwindIcon from "@/icons/tailwind-icon";
 import TypescriptIcon from "@/icons/ts-icon";
-import SkillsTile from "./skills-icon";
+import SkillsTile from "./skills-tile";
 import SkillsSection from "./skills-section";
 import ExpressjsIcon from "@/icons/expressjs-icon";
 import { Badge } from "../ui/badge";
@@ -13,13 +13,14 @@ import MongodbIcon from "@/icons/mongodb-icon";
 import PsqlIcon from "@/icons/psql-icon";
 import PythonIcon from "@/icons/python-icon";
 import NeovimIcon from "@/icons/neovim-icon";
+import LayoutMotion from "../motion/layout-motion";
 
 export default function Skills() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <LayoutMotion id="skills" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container grid items-center justify-center gap-8 px-4 text-center md:px-6 lg:gap-12">
         <div className="space-y-3">
-          <Badge variant={"header"}>Technologies</Badge>
+          <Badge variant={"header"}>Skills</Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             My Tech Stack
           </h2>
@@ -28,7 +29,7 @@ export default function Skills() {
             development projects.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center">
           <SkillsSection title="Frontend">
             <SkillsTile icon={<ReactIcon />} title="React" />
             <SkillsTile icon={<NextjsIcon />} title="Next.js" />
@@ -49,6 +50,6 @@ export default function Skills() {
           </SkillsSection>
         </div>
       </div>
-    </section>
+    </LayoutMotion>
   );
 }
