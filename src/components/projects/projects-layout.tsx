@@ -1,6 +1,7 @@
-import Link from "next/link";
-import ImgContainer from "../img-container";
+import { Github, Globe } from "lucide-react";
 import { ReactNode } from "react";
+import ContactButton from "../contact/contact-button";
+import ImgContainer from "../img-container";
 
 interface Props {
   title: string;
@@ -23,23 +24,22 @@ export default function ProjectLayout({
       <h3 className="text-xl font-bold">{title}</h3>
       <p className="text-muted">{children}</p>
       <div className="flex gap-2">
-        {liveUrl ? (
-          <Link
-            href={liveUrl}
-            className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}
-          >
-            Live Demo
-          </Link>
-        ) : null}
         {codeUrl ? (
-          <Link
+          <ContactButton
             href={codeUrl}
-            className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}
-          >
-            GitHub
-          </Link>
+            name="GitHub"
+            icon={<Github className="size-5" />}
+            className="h-8"
+            variant="secondary"
+          />
+        ) : null}
+        {liveUrl ? (
+          <ContactButton
+            href={liveUrl}
+            name="Live Demo"
+            icon={<Globe className="size-5" />}
+            className="h-8"
+          />
         ) : null}
       </div>
     </div>

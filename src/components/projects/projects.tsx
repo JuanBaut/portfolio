@@ -22,17 +22,37 @@ export default function Projects() {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-          <ProjectLayout imgSrc="projects/expresstrack" title="ExpressTrack">
+          <ProjectLayout
+            codeUrl="https://github.com/JuanBaut/mud-api"
+            imgSrc="projects/expresstrack1"
+            title="ExpressTrack"
+          >
             A modern web application built with Next.js, Tailwind CSS, Node.js,
             and MongoDB.
           </ProjectLayout>
-          <ProjectLayout imgSrc="projects/pixelstream" title="Pixel Stream">
+          <ProjectLayout
+            liveUrl="https://www.pixelstream.com.co/"
+            imgSrc="projects/pixelstream1"
+            title="Pixel Stream"
+          >
             A responsive single-page website built with Next.js and Tailwind
             CSS.
           </ProjectLayout>
-          <ProjectLayout imgSrc="projects/appguard" title="AppGuard">
+          <ProjectLayout
+            liveUrl="https://app-guard-front.vercel.app/"
+            codeUrl="https://github.com/AppGuardD/AppGuard-Front"
+            imgSrc="projects/appguard1"
+            title="AppGuard"
+          >
             An e-commerce website built with React, Tailwind CSS, Node.js and
             PostgreSQL.
+          </ProjectLayout>
+          <ProjectLayout
+            codeUrl="https://github.com/JuanBaut/videogames-pi"
+            imgSrc="projects/videogames"
+            title="Videogames App"
+          >
+            Wiki fullstack app made with React, Vite, Express.js and PostgreSQL.
           </ProjectLayout>
         </div>
       </div>

@@ -8,7 +8,7 @@ type Props = {
 
 export default function ImgContainer({ src }: Props) {
   return (
-    <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-xl object-center p-2 lg:order-last">
+    <div className="border shadow-lg relative mx-auto aspect-video w-full overflow-hidden rounded-xl object-center p-2 lg:order-last">
       <CldImage
         src={src}
         alt="Image"
