@@ -3,9 +3,20 @@
 import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
+
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute(
+        "content",
+        theme === "light" ? "#ebefee" : "#070908",
+      );
+    }
+  }, [theme]);
 
   const handleChangeTheme = () => {
     if (theme === "dark") {
