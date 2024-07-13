@@ -2,7 +2,6 @@ import { Github, Globe } from "lucide-react";
 import { ReactNode } from "react";
 import ContactButton from "../contact/contact-button";
 import ImgContainer from "../img-container";
-import { MagicCard, MagicContainer } from "../motion/card-motion";
 
 interface Props {
   title: string;
