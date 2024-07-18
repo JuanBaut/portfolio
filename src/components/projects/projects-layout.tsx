@@ -24,7 +24,7 @@ export default function ProjectLayout({
       <h3 className="text-xl font-bold">{title}</h3>
       <p className="text-muted">{children}</p>
       <div className="flex gap-2">
-        {codeUrl ? (
+        {codeUrl && (
           <ContactButton
             href={codeUrl}
             name="GitHub"
@@ -32,15 +32,15 @@ export default function ProjectLayout({
             className="h-8"
             variant="secondary"
           />
-        ) : null}
-        {liveUrl ? (
+        )}
+        {liveUrl && (
           <ContactButton
             href={liveUrl}
             name="Live Demo"
             icon={<Globe className="size-5" />}
             className="h-8"
           />
-        ) : null}
+        )}
       </div>
     </div>
   );
