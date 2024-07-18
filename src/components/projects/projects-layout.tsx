@@ -20,7 +20,7 @@ export default function ProjectLayout({
 }: Props) {
   return (
     <div className="space-y-2">
-      <ImgContainer src={imgSrc} />
+      <ImgContainer loading="lazy" src={imgSrc} />
       <h3 className="text-xl font-bold">{title}</h3>
       <p className="text-muted">{children}</p>
       <div className="flex gap-2">

@@ -1,15 +1,32 @@
-import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
-import "./globals.css";
-import { Sublayout } from "./sublayout";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
+import Head from "next/head";
+import "./globals.css";
+import { ThemeProvider } from "./sublayout";
 
-const font = DM_Sans({ subsets: ["latin"] });
+const font = DM_Sans({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Andres Bautista",
   description: "Web developer",
+  manifest: "/site.webmanifest",
+  icons: [
+    { rel: "apple-touch-icon", url: "/apple-touch-icon.png", sizes: "180x180" },
+    {
+      rel: "icon",
+      url: "/favicon-32x32.png",
+      sizes: "32x32",
+      type: "image/png",
+    },
+    {
+      rel: "icon",
+      url: "/favicon-16x16.png",
+      sizes: "16x16",
+      type: "image/png",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -19,29 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning>
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
+      <Head>
         <meta name="theme-color" content="" />
-      </head>
+      </Head>
       <body className={font.className}>
-        <Sublayout
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
@@ -50,7 +49,7 @@ export default function RootLayout({
           {children}
           <Analytics />
           <SpeedInsights />
-        </Sublayout>
+        </ThemeProvider>
       </body>
     </html>
   );

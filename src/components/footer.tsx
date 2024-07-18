@@ -1,4 +1,5 @@
-import { Copyright, Snowflake } from "lucide-react";
+import { starNorth } from "@lucide/lab";
+import { Copyright, Icon } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,7 +9,8 @@ export default function Footer() {
         reserved.
       </span>
       <span className="flex items-center gap-2 text-xs text-muted font-bold">
-        I never give up. <Snowflake className="size-4 animate-spin" />
+        Fall six times, stand up seven.
+        <Icon iconNode={starNorth} className="size-4" />
       </span>
     </footer>
   );

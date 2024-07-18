@@ -1,19 +1,19 @@
+import ExpressjsIcon from "@/icons/expressjs-icon";
 import GitIcon from "@/icons/git-icon";
 import LinuxIcon from "@/icons/linux-icon";
+import MongodbIcon from "@/icons/mongodb-icon";
+import NeovimIcon from "@/icons/neovim-icon";
 import NextjsIcon from "@/icons/nextjs-icon";
 import NodejsIcon from "@/icons/nodejs-icon";
+import PsqlIcon from "@/icons/psql-icon";
+import PythonIcon from "@/icons/python-icon";
 import ReactIcon from "@/icons/react-icon";
 import TailwindIcon from "@/icons/tailwind-icon";
 import TypescriptIcon from "@/icons/ts-icon";
-import SkillsTile from "./skills-tile";
-import SkillsSection from "./skills-section";
-import ExpressjsIcon from "@/icons/expressjs-icon";
-import { Badge } from "../ui/badge";
-import MongodbIcon from "@/icons/mongodb-icon";
-import PsqlIcon from "@/icons/psql-icon";
-import PythonIcon from "@/icons/python-icon";
-import NeovimIcon from "@/icons/neovim-icon";
 import LayoutMotion from "../motion/layout-motion";
+import { Badge } from "../ui/badge";
+import SkillsSection from "./skills-section";
+import SkillsTile from "./skills-tile";
 
 export default function Skills() {
   return (

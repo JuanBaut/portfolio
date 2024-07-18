@@ -5,9 +5,11 @@ import { MagicCard, MagicContainer } from "./motion/card-motion";
 
 type Props = {
   src: string;
+  priority?: boolean;
+  loading: "eager" | "lazy";
 };
 
-export default function ImgContainer({ src }: Props) {
+export default function ImgContainer({ src, loading, priority }: Props) {
   return (
     <MagicContainer>
       <MagicCard>
@@ -17,7 +19,8 @@ export default function ImgContainer({ src }: Props) {
             alt="Image"
             className="object-cover"
             sizes="50vw"
-            priority
+            loading={loading}
+            priority={priority}
             fill
           />
         </div>
