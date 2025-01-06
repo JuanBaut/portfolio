@@ -7,13 +7,21 @@ type Props = {
   src: string;
   priority?: boolean;
   loading: "eager" | "lazy";
+  aspectRatio?: string;
 };
 
-export default function ImgContainer({ src, loading, priority }: Props) {
+export default function ImgContainer({
+  src,
+  loading,
+  priority,
+  aspectRatio = "aspect-video",
+}: Props) {
   return (
     <MagicContainer>
       <MagicCard>
-        <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-sm object-center p-2 lg:order-last">
+        <div
+          className={`w-full relative mx-auto overflow-hidden rounded-sm object-center p-2 lg:order-last ${aspectRatio}`}
+        >
           <CldImage
             src={src}
             alt="Image"
