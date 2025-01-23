@@ -1,7 +1,7 @@
 import { Github, Globe } from "lucide-react";
 import { ReactNode } from "react";
 import ContactButton from "../contact/contact-button";
-import ImgContainer from "../img-container";
+import HorizontalImage from "../img-container";
 
 interface Props {
   title: string;
@@ -20,7 +20,7 @@ export default function ProjectLayout({
 }: Props) {
   return (
     <div className="space-y-2">
-      <ImgContainer loading="lazy" src={imgSrc} />
+      <HorizontalImage loading="lazy" src={imgSrc} />
       <h3 className="text-xl font-bold">{title}</h3>
       <p className="text-muted">{children}</p>
       <div className="flex gap-2">
