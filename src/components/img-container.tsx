@@ -8,6 +8,7 @@ type Props = {
   priority?: boolean;
   loading: "eager" | "lazy";
   aspectRatio?: string;
+  className?: string;
 };
 
 export default function ImgContainer({
@@ -20,7 +21,7 @@ export default function ImgContainer({
     <MagicContainer>
       <MagicCard>
         <div
-          className={`w-full relative mx-auto overflow-hidden rounded-sm object-center p-2 lg:order-last ${aspectRatio}`}
+          className={`w-full relative mx-auto overflow-hidden rounded-sm object-center p-2 ${aspectRatio}`}
         >
           <CldImage
             src={src}
@@ -34,5 +35,31 @@ export default function ImgContainer({
         </div>
       </MagicCard>
     </MagicContainer>
+  );
+}
+
+export function SqrImgContainer({ src, loading, priority }: Props) {
+  return (
+    <MagicContainer>
+      <MagicCard>
+        <ImageDiv src={src} loading={loading} priority={priority} />
+      </MagicCard>
+    </MagicContainer>
+  );
+}
+
+function ImageDiv({ src, loading, priority }: Props) {
+  return (
+    <div className="relative h-96 overflow-hidden rounded-sm object-center p-2">
+      <CldImage
+        className="object-cover"
+        src={src}
+        alt="Image"
+        sizes="50vw"
+        loading={loading}
+        priority={priority}
+        fill
+      />
+    </div>
   );
 }
