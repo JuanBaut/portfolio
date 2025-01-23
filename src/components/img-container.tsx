@@ -41,25 +41,17 @@ export default function HorizontalImage({
 
 export function HeroImage({ src, loading, priority }: Props) {
   return (
-    <>
-      <div className="grid rounded gap-2 boder w-full grid-cols-[1fr,auto,1fr]">
-        <motion.div
-          className="w-full rounded bg-gradient-to-l from-secondary my-1"
-          animate={{ opacity: [0, 100] }}
-        />
-
-        <MagicContainer>
-          <MagicCard>
-            <ImageContainer src={src} loading={loading} priority={priority} />
-          </MagicCard>
-        </MagicContainer>
-
-        <motion.div
-          className="w-full rounded bg-gradient-to-r from-secondary my-1"
-          animate={{ opacity: [0, 100] }}
-        />
-      </div>
-    </>
+    <div className="grid rounded gap-2 boder w-full grid-cols-[1fr,auto,1fr]">
+      <motion.div
+        className="w-full rounded bg-gradient-to-l from-secondary"
+        animate={{ opacity: [0, 100] }}
+      />
+      <ImageContainer src={src} loading={loading} priority={priority} />
+      <motion.div
+        className="w-full rounded bg-gradient-to-r from-secondary"
+        animate={{ opacity: [0, 100] }}
+      />
+    </div>
   );
 }
 
