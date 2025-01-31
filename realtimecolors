@@ -1,0 +1,55 @@
+@layer base {
+  :root {
+    --background: ${bgL.hex};
+    --foreground: ${textL.hex};
+    --card: ${bgL.hex};
+    --card-foreground: ${textL.hex};
+    --popover: ${bgL.hex};
+    --popover-foreground: ${textL.hex};
+    --primary: ${primaryL.hex};
+    --primary-foreground: ${primaryFgL.hex};
+    --secondary: ${secondaryL.hex};
+    --secondary-foreground: ${secondaryFgL.hex};
+    --muted: ${bgL.hex.20};
+    --muted-foreground: ${textL.hex.70};
+    --accent: ${accentL.hex};
+    --accent-foreground: ${accentFgL.hex};
+    --destructive: 0 85% 60%;
+    --destructive-foreground: ${textL.hex};
+    --border: ${bgL.hex.20};
+    --input: ${bgL.hex.20};
+    --ring: ${accentL.hex.40};
+    --chart-1: hls(12 76% 61%);
+    --chart-2: hls(173 58% 39%);
+    --chart-3: hls(197 37% 24%);
+    --chart-4: hls(43 74% 66%);
+    --chart-5: hls(27 87% 67%);
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: ${bgD.hex};
+    --foreground: ${textD.hex};
+    --card: ${bgD.hex};
+    --card-foreground: ${textD.hex};
+    --popover: ${bgD.hex};
+    --popover-foreground: ${textD.hex};
+    --primary: ${primaryD.hex};
+    --primary-foreground: ${primaryFgD.hex};
+    --secondary: ${secondaryD.hex};
+    --secondary-foreground: ${secondaryFgD.hex};
+    --muted: ${bgD.hex.80};
+    --muted-foreground: ${textD.hex};
+    --accent: ${accentD.hex};
+    --accent-foreground: ${accentFgD.hex};
+    --destructive: 0 62% 30%;
+    --destructive-foreground: ${textD.hex.10};
+    --border: ${bgD.hex.60};
+    --input: ${bgD.hex.80};
+    --chart-1: hls(12 76% 61%);
+    --chart-2: hls(173 58% 39%);
+    --chart-3: hls(197 37% 24%);
+    --chart-4: hls(43 74% 66%);
+    --chart-5: hls(27 87% 67%);
+    --ring: ${accentD.hex.60};
+  }
+}
