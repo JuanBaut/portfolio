@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 export async function GET(
   _: Request,
-  { params }: { params: Promise<{ format: string }> }
+  { params }: { params: Promise<{ format: string }> },
 ) {
   const { format } = await params;
   const validFormats = ["rss.xml", "atom.xml", "feed.json"];
@@ -21,7 +21,7 @@ export async function GET(
   if (!validFormats.includes(format)) {
     return NextResponse.json(
       { error: "Unsupported feed format" },
-      { status: 404 }
+      { status: 404 },
     );
   }
 

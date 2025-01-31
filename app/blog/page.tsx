@@ -26,14 +26,14 @@ export default function BlogPosts() {
           .map((post) => (
             <Link
               key={post.slug}
-              className="flex flex-col space-y-1 mb-5 transition-opacity duration-200 hover:opacity-80"
+              className="mb-5 flex flex-col space-y-1 transition-opacity duration-200 hover:opacity-80"
               href={`/blog/${post.slug}`}
             >
-              <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-2">
+              <div className="flex w-full flex-col items-start justify-between space-y-1 sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0">
                 <h2 className="text-black dark:text-white">
                   {post.metadata.title}
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-400 tabular-nums text-sm">
+                <p className="text-sm tabular-nums text-neutral-600 dark:text-neutral-400">
                   {formatDate(post.metadata.publishedAt, false)}
                 </p>
               </div>
