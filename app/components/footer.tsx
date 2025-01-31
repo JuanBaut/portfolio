@@ -1,6 +1,6 @@
 "use client";
 
-import { metaData, socialLinks } from "app/config";
+import { metaData, links } from "app/config";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 
@@ -17,9 +17,9 @@ function SocialLink({ href, icon: Icon }) {
 function SocialLinks() {
   return (
     <div className="float-right flex gap-3.5 text-lg transition-opacity duration-300 hover:opacity-90">
-      <SocialLink href={socialLinks.github} icon={FaGithub} />
-      <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
-      <SocialLink href={socialLinks.email} icon={TbMailFilled} />
+      <SocialLink href={links.github} icon={FaGithub} />
+      <SocialLink href={links.linkedin} icon={FaLinkedinIn} />
+      <SocialLink href={links.email} icon={TbMailFilled} />
     </div>
   );
 }
@@ -30,7 +30,7 @@ export default function Footer() {
       <time>© {YEAR}</time>{" "}
       <a
         className="no-underline"
-        href={socialLinks.github}
+        href={links.github}
         target="_blank"
         rel="noopener noreferrer"
       >

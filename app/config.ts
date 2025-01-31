@@ -7,8 +7,15 @@ export const metaData = {
     "Andres Bautista is a Software Developer who used Next.js to build this",
 };
 
-export const socialLinks = {
+export const links = {
   github: "https://github.com/and-rs",
   linkedin: "https://www.linkedin.com/in/juanandresdev",
   email: "mailto:juanb.perez96@gmail.com",
+  soundcloud: "https://soundcloud.com/and_rs",
+  twitter: "https://x.com/_and_rs",
+
+  typescript: "https://www.typescriptlang.org/",
+  tailwind: "https://tailwindcss.com/",
+  python: "https://www.python.org/",
+  go: "https://go.dev/",
 };

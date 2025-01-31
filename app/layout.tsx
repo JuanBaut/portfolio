@@ -1,5 +1,12 @@
 import "./global.css";
 import type { Metadata } from "next";
+import {
+  Golos_Text,
+  Inter,
+  Manrope,
+  Recursive,
+  Work_Sans,
+} from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Navbar } from "./components/nav";
@@ -47,6 +54,12 @@ export const metadata: Metadata = {
 
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
+const fontSans = Golos_Text({
+  weight: "variable",
+  subsets: ["latin-ext"],
+  variable: "--font-sans",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -55,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(GeistSans.variable, GeistMono.variable)}
+      className={cx(fontSans.variable, GeistMono.variable)}
       suppressHydrationWarning
     >
       <body className="mx-auto mb-20 mt-2 flex flex-col items-center justify-center antialiased lg:mb-40 lg:mt-8">
