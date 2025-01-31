@@ -60,7 +60,7 @@ export default function RootLayout({
     >
       <body className="mx-auto mb-20 mt-2 flex flex-col items-center justify-center antialiased lg:mb-40 lg:mt-8">
         <ThemeProvider>
-          <main className="mt-2 flex w-full min-w-0 max-w-[640px] flex-auto flex-col px-6 sm:px-4 md:mt-6 md:px-0">
+          <main className="mt-2 flex w-full min-w-0 max-w-screen-sm flex-auto flex-col px-6 sm:px-4 md:mt-6 md:px-0">
             <Navbar />
             {children}
             <Footer />

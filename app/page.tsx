@@ -4,62 +4,46 @@ import { socialLinks } from "./config";
 export default function Page() {
   return (
     <section>
-      <a href={socialLinks.twitter} target="_blank">
+      <h2 className="text-2xl font-medium leading-none tracking-tighter">
+        Software Developer & Open-Source Enthusiast
+      </h2>
+      <div className="pt-4 sm:pt-8">
+        <ProfileImage />
+        <div className="flex flex-col gap-2 leading-7">
+          <p>
+            Born and based in Colombia. I believe in designing things with
+            passion to solve problems with usability and aesthetics in mind. I
+            speak C1 English and Native Spanish
+          </p>
+          <p>
+            I am a Neovim fan, I love to work with TypeScript and Tailwind on
+            the front-end, with Python or Go on the back-end and the terminal is
+            my best friend.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProfileImage() {
+  return (
+    <div className="mb-4 grid grid-cols-[1fr,auto,1fr] gap-2 sm:float-right sm:mb-0 sm:ml-8 sm:block">
+      <div className="w-full bg-gradient-to-l from-blue-200" />
+
+      <a href={socialLinks.github} target="_blank">
         <Image
-          src="/profile.png"
+          className="border-white/20 transition hover:border-white/40 sm:border sm:p-1"
+          src="/me.jpeg"
           alt="Profile photo"
-          className="mx-auto mb-10 mt-0 block rounded-full bg-gray-100 grayscale hover:grayscale-0 sm:float-right sm:mb-5 sm:ml-5 lg:mb-5 lg:mt-5"
-          unoptimized
-          width={160}
-          height={160}
+          //unoptimized
+          width={230}
+          height={230}
           priority
         />
       </a>
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
-        Portfolio, made simple!
-      </h1>
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS.
-        </p>
-        <p>
-          Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
-          Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
-          <a
-            target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-          >
-            more
-          </a>
-          .
-        </p>
-        <p>
-          Nextfolio is{" "}
-          <a href={socialLinks.github} target="_blank">
-            open-source
-          </a>{" "}
-          and fully customizable, making it easy to add more features.
-        </p>
-        <p>
-          <a
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-            target="_blank"
-          >
-            Deploy
-          </a>{" "}
-          your Nextfolio site with Vercel in minutes and follow the set up
-          instructions in the{" "}
-          <a href="/blog/getting-started">Getting Started</a> post.
-        </p>
-        <p>
-          Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
-            Sirius
-          </a>
-          .
-        </p>
-      </div>
-    </section>
+
+      <div className="w-full bg-gradient-to-r from-blue-200" />
+    </div>
   );
 }
