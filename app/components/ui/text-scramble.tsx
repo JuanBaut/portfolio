@@ -22,7 +22,7 @@ export function TextScramble({
   speed = 0.04,
   characterSet = defaultChars,
   className,
-  as: Component = "p",
+  as: Component = "span",
   trigger = true,
   onScrambleComplete,
   ...props

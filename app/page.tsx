@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { ReactNode } from "react";
+import { Anchor } from "./components/ui/anchor";
 import { TextShimmer } from "./components/ui/text-shimmer";
 import { links } from "./config";
 
+const x = <Anchor href={links.x}>X</Anchor>;
 const go = <Anchor href={links.go}>Go</Anchor>;
-const x = <Anchor href={links.twitter}>X</Anchor>;
 const py = <Anchor href={links.python}>Python</Anchor>;
 const tw = <Anchor href={links.tailwind}>Tailwind</Anchor>;
 const li = <Anchor href={links.linkedin}>LinkedIn</Anchor>;
@@ -70,21 +70,3 @@ function ProfileImage() {
   );
 }
 
-export function Anchor({
-  href,
-  children,
-}: {
-  href: string;
-  children: ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="border-b border-muted-foreground transition hover:border-foreground hover:text-foreground"
-    >
-      {children}
-    </a>
-  );
-}

@@ -8,11 +8,11 @@ export const metaData = {
 };
 
 export const links = {
+  x: "https://x.com/_and_rs",
   github: "https://github.com/and-rs",
-  linkedin: "https://www.linkedin.com/in/juanandresdev",
   email: "mailto:juanb.perez96@gmail.com",
   soundcloud: "https://soundcloud.com/and_rs",
-  twitter: "https://x.com/_and_rs",
+  linkedin: "https://www.linkedin.com/in/juanandresdev",
 
   typescript: "https://www.typescriptlang.org/",
   tailwind: "https://tailwindcss.com/",
