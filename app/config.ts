@@ -8,7 +8,7 @@ export const metaData = {
 };
 
 export const links = {
-  x: "https://x.com/_and_rs",
+  twitter: "https://x.com/_and_rs",
   github: "https://github.com/and-rs",
   email: "mailto:juanb.perez96@gmail.com",
   soundcloud: "https://soundcloud.com/and_rs",

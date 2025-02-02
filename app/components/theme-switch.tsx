@@ -2,6 +2,8 @@
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 import React, { useEffect } from "react";
 import { FaCircleHalfStroke } from "react-icons/fa6";
+import { Button } from "./ui/button";
+import { Moon, Sun } from "lucide-react";
 
 // Key to store user preference in localStorage
 const storageKey = "theme-preference";
@@ -73,15 +75,14 @@ export function ThemeSwitch() {
   };
 
   return (
-    <button
+    <Button
       id="theme-toggle"
       aria-label={`Switch to ${currentTheme === "light" ? "dark" : "light"} mode`}
       onClick={toggleTheme}
-      className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90"
+      variant={"ghost"}
+      size={"icon"}
     >
-      <FaCircleHalfStroke
-        className={`h-[14px] w-[14px] ${currentTheme === "dark" ? "text-[#D4D4D4]" : "text-[#1c1c1c]"}`}
-      />
-    </button>
+      {currentTheme === "light" ? <Sun /> : <Moon />}
+    </Button>
   );
 }

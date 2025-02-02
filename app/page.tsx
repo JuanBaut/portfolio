@@ -3,9 +3,9 @@ import { Anchor } from "./components/ui/anchor";
 import { TextShimmer } from "./components/ui/text-shimmer";
 import { links } from "./config";
 
-const x = <Anchor href={links.x}>X</Anchor>;
 const go = <Anchor href={links.go}>Go</Anchor>;
 const py = <Anchor href={links.python}>Python</Anchor>;
+const tt = <Anchor href={links.twitter}>Twitter</Anchor>;
 const tw = <Anchor href={links.tailwind}>Tailwind</Anchor>;
 const li = <Anchor href={links.linkedin}>LinkedIn</Anchor>;
 const ts = <Anchor href={links.typescript}>TypeScript</Anchor>;
@@ -41,7 +41,7 @@ export default function Page() {
         </p>
         <br />
         <p>
-          Feel free to reach out to me via {x} or {li} if you wish to
+          Feel free to reach out to me via {tt} or {li} if you wish to
           collaborate or talk!
         </p>
       </div>
@@ -56,7 +56,7 @@ function ProfileImage() {
 
       <a href={links.github} target="_blank" rel="noopener noreferrer">
         <Image
-          className="sm:p-2"
+          className="sm:pt-3"
           alt="Profile photo"
           src="/me.jpeg"
           width={230}
@@ -69,4 +69,3 @@ function ProfileImage() {
     </div>
   );
 }
-

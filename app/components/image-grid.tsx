@@ -7,7 +7,7 @@ interface ImageGridProps {
     alt: string;
     href?: string;
   }[];
-  columns?: 2 | 3 | 4; // Accepts 2, 3, or 4 columns
+  columns?: 2 | 3 | 4;
 }
 
 export const ImageGrid: React.FC<ImageGridProps> = ({
@@ -26,21 +26,14 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
         {images.map((image, index) => (
           <div key={index} className="relative aspect-square">
             {image.href ? (
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={image.href}
-                className="block h-full w-full"
-              >
-                <Image
-                  alt={image.alt}
-                  src={image.src}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  priority
-                  className="rounded-lg object-cover"
-                />
-              </a>
+              <Image
+                alt={image.alt}
+                src={image.src}
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                priority
+                className="object-cover"
+              />
             ) : (
               <Image
                 alt={image.alt}
@@ -48,7 +41,7 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
                 fill
                 sizes="(max-width: 768px) 50vw, 33vw"
                 priority
-                className="rounded-lg object-cover"
+                className="object-cover"
               />
             )}
           </div>
