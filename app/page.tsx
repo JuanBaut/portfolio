@@ -14,7 +14,7 @@ const sc = <Anchor href={links.soundcloud}>SoundCloud</Anchor>;
 export default function Page() {
   return (
     <section>
-      <h1 className="text-2xl leading-none tracking-tighter text-foreground">
+      <h1 className="text-2xl font-medium leading-none tracking-tighter text-foreground">
         <TextShimmer>Software Developer</TextShimmer>
         <span> &amp; Open-Source Enthusiast</span>
       </h1>

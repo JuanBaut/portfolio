@@ -1,20 +1,13 @@
-import "./global.css";
-import type { Metadata } from "next";
-import {
-  Golos_Text,
-  Inter,
-  Manrope,
-  Recursive,
-  Work_Sans,
-} from "next/font/google";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GeistMono } from "geist/font/mono";
+import type { Metadata } from "next";
+import { Golos_Text } from "next/font/google";
 import Footer from "./components/footer";
+import { Navbar } from "./components/nav";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
+import "./global.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
