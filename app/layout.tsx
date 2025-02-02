@@ -9,6 +9,7 @@ import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
 import "./global.css";
 import { cn } from "./lib/utils";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -63,6 +64,26 @@ export default function RootLayout({
       className={cn(fontSans.variable, GeistMono.variable)}
       suppressHydrationWarning
     >
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <body className="mx-auto mb-20 mt-2 flex flex-col items-center justify-center antialiased lg:mb-40 lg:mt-8">
         <ThemeProvider>
           <main className="mt-2 flex w-full min-w-0 max-w-screen-sm flex-auto flex-col px-6 sm:px-4 md:mt-6 md:px-0">
