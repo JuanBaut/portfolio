@@ -2,7 +2,7 @@
 import { type JSX, useEffect, useState } from "react";
 import { motion, MotionProps } from "motion/react";
 
-export type TextScrambleProps = {
+export interface Props extends MotionProps {
   children: string;
   duration?: number;
   speed?: number;
@@ -11,7 +11,7 @@ export type TextScrambleProps = {
   className?: string;
   trigger?: boolean;
   onScrambleComplete?: () => void;
-} & MotionProps;
+}
 
 const defaultChars =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -22,11 +22,11 @@ export function TextScramble({
   speed = 0.04,
   characterSet = defaultChars,
   className,
-  as: Component = "span",
+  as: Component = "div",
   trigger = true,
   onScrambleComplete,
   ...props
-}: TextScrambleProps) {
+}: Props) {
   const MotionComponent = motion.create(
     Component as keyof JSX.IntrinsicElements,
   );

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { metaData } from "../config";
 import { ThemeSwitch } from "./theme-switch";
 import { TextScramble } from "./ui/text-scramble";
+import { useRouter } from "next/navigation";
 
 const navItems = {
   "/blog": { name: "Blog" },
@@ -36,23 +37,22 @@ export function Navbar() {
 
 function HomeTitle() {
   const [isTriggered, setIsTriggered] = useState(false);
+  const router = useRouter();
 
   return (
-    <div className="flex items-center">
-      <Link
-        href="/"
-        className="text-3xl font-medium tracking-tight transition hover:underline"
+    <div
+      className="text-3xl font-medium underline-offset-2 hover:underline"
+      onMouseDown={() => router.push("/")}
+    >
+      <TextScramble
+        as="div"
+        speed={0.02}
+        trigger={isTriggered}
+        onHoverStart={() => setIsTriggered(true)}
+        onHoverEnd={() => setIsTriggered(false)}
       >
-        <TextScramble
-          as="span"
-          speed={0.02}
-          trigger={isTriggered}
-          onHoverStart={() => setIsTriggered(true)}
-          onHoverEnd={() => setIsTriggered(false)}
-        >
-          {metaData.title}
-        </TextScramble>
-      </Link>
+        {metaData.title}
+      </TextScramble>
     </div>
   );
 }
