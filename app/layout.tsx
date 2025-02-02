@@ -8,6 +8,7 @@ import { Navbar } from "./components/nav";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
 import "./global.css";
+import { cn } from "./lib/utils";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -45,8 +46,6 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
-
 const fontSans = Golos_Text({
   weight: "variable",
   subsets: ["latin-ext"],
@@ -61,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(fontSans.variable, GeistMono.variable)}
+      className={cn(fontSans.variable, GeistMono.variable)}
       suppressHydrationWarning
     >
       <body className="mx-auto mb-20 mt-2 flex flex-col items-center justify-center antialiased lg:mb-40 lg:mt-8">
