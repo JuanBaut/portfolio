@@ -1,57 +1,73 @@
 "use client";
-import React, { useMemo, type JSX } from "react";
-import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
 
-export type TextShimmerProps = {
-  children: string;
-  as?: React.ElementType;
+import { cn } from "@/lib/utils";
+import {
+  AnimatePresence,
+  AnimatePresenceProps,
+  motion,
+  Transition,
+  Variants,
+} from "motion/react";
+import { Children, ReactNode, useEffect, useState } from "react";
+
+interface Props {
+  children: ReactNode[];
   className?: string;
-  duration?: number;
-  spread?: number;
-};
+  interval?: number;
+  transition?: Transition;
+  variants?: Variants;
+  onIndexChange?: (index: number) => void;
+  trigger?: boolean;
+  mode?: AnimatePresenceProps["mode"];
+}
 
 export function TextShimmer({
   children,
-  as: Component = "p",
   className,
-  duration = 3,
-  spread = 3,
-}: TextShimmerProps) {
-  const MotionComponent = motion.create(
-    Component as keyof JSX.IntrinsicElements,
-  );
+  interval = 2,
+  transition = { duration: 0.3 },
+  variants,
+  onIndexChange,
+  trigger = true,
+  mode = "popLayout",
+}: Props) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const items = Children.toArray(children);
 
-  const dynamicSpread = useMemo(() => {
-    return children.length * spread;
-  }, [children, spread]);
+  useEffect(() => {
+    if (!trigger) return;
+
+    const intervalMs = interval * 1000;
+    const timer = setInterval(() => {
+      setCurrentIndex((current) => {
+        const next = (current + 1) % items.length;
+        onIndexChange?.(next);
+        return next;
+      });
+    }, intervalMs);
+    return () => clearInterval(timer);
+  }, [items.length, interval, onIndexChange, trigger]);
+
+  const motionVariants: Variants = {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    exit: { y: -20, opacity: 0 },
+  };
 
   return (
-    <MotionComponent
-      className={cn(
-        "relative inline-block bg-[length:250%_100%,auto] bg-clip-text",
-        "text-transparent",
-        "[--base-color:hsl(var(--muted-foreground))]",
-        "[--base-gradient-color:hsl(var(--foreground))]",
-        "[--bg:linear-gradient(90deg,#0000_calc(50%-var(--spread)),var(--base-gradient-color),#0000_calc(50%+var(--spread)))]",
-        "[background-repeat:no-repeat,padding-box]",
-        className,
-      )}
-      initial={{ backgroundPosition: "100% center" }}
-      animate={{ backgroundPosition: "0% center" }}
-      transition={{
-        repeat: Infinity,
-        duration,
-        ease: "linear",
-      }}
-      style={
-        {
-          "--spread": `${dynamicSpread}px`,
-          backgroundImage: `var(--bg), linear-gradient(var(--base-color), var(--base-color))`,
-        } as React.CSSProperties
-      }
-    >
-      {children}
-    </MotionComponent>
+    <div className={cn("relative inline-block whitespace-nowrap", className)}>
+      <AnimatePresence mode={mode} initial={false}>
+        <motion.div
+          key={currentIndex}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={transition}
+          variants={variants || motionVariants}
+        >
+          {items[currentIndex]}
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 }

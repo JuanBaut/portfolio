@@ -1,8 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GeistMono } from "geist/font/mono";
 import type { Metadata } from "next";
-import { Golos_Text } from "next/font/google";
+import { Golos_Text, JetBrains_Mono } from "next/font/google";
 import Footer from "./components/footer";
 import { Navbar } from "./components/nav";
 import { ThemeProvider } from "./components/theme-switch";
@@ -53,6 +52,12 @@ const fontSans = Golos_Text({
   variable: "--font-sans",
 });
 
+const fontMono = JetBrains_Mono({
+  weight: "variable",
+  subsets: ["latin-ext"],
+  variable: "--font-mono"
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -61,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(fontSans.variable, GeistMono.variable)}
+      className={cn(fontSans.variable, fontMono.variable)}
       suppressHydrationWarning
     >
       <Head>
@@ -86,7 +91,7 @@ export default function RootLayout({
       </Head>
       <body className="mx-auto mb-20 mt-2 flex flex-col items-center justify-center antialiased lg:mb-40 lg:mt-8">
         <ThemeProvider>
-          <main className="mt-2 flex w-full min-w-0 max-w-screen-sm flex-auto flex-col px-6 sm:px-4 md:mt-6 md:px-0">
+          <main className="mt-2 flex w-full min-w-0 max-w-(--breakpoint-sm) flex-auto flex-col px-6 sm:px-4 md:mt-6 md:px-0">
             <Navbar />
             {children}
             <Footer />
