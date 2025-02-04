@@ -1,10 +1,10 @@
 export const metaData = {
-  baseUrl: "https://nextfolio-template.vercel.app/",
-  title: "Andres Bautista",
+  baseUrl: "https://andres.contact/",
+  title: "Full-stack Developer",
   name: "Andres Bautista Portfolio",
-  ogImage: "/opengraph-image.png",
+  ogImage: "/android-chrome-512x512.png",
   description:
-    "Andres Bautista is a Software Developer who used Next.js to build this",
+    "Andres Bautista is a Full-stack Developer very passionate about coding",
 };
 
 export const links = {
