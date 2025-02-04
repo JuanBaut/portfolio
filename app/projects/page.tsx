@@ -16,11 +16,11 @@ export default function Projects() {
           <Link
             key={index}
             href={project.url}
-            className="mb-5 flex flex-col space-y-1 transition-opacity duration-200 hover:opacity-80"
+            className="flex flex-col mb-5 space-y-1 transition-opacity duration-200 hover:opacity-80"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="flex w-full flex-col items-start justify-between space-y-1 sm:flex-row sm:items-center sm:space-x-2 sm:space-y-0">
+            <div className="flex flex-col justify-between items-start space-y-1 w-full sm:flex-row sm:items-center sm:space-y-0 sm:space-x-2">
               <h2>{project.title}</h2>
               <p className="tracking-tight text-muted-foreground">
                 {project.description}

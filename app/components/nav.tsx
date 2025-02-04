@@ -15,15 +15,15 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <nav className="mb-12 py-5 lg:mb-16">
+    <nav className="py-5 mb-12 lg:mb-16">
       <div className="flex flex-col justify-between md:flex-row md:items-center">
         <HomeTitle />
-        <div className="mt-6 flex flex-row items-center gap-4 md:ml-auto md:mt-0">
+        <div className="flex flex-row gap-4 items-center mt-6 md:mt-0 md:ml-auto">
           {Object.entries(navItems).map(([path, { name }]) => (
             <Link
               key={path}
               href={path}
-              className="relative flex align-middle transition-all hover:text-muted-foreground"
+              className="flex relative align-middle transition-all hover:text-muted-foreground"
             >
               {name}
             </Link>
@@ -41,7 +41,7 @@ function HomeTitle() {
 
   return (
     <div
-      className="text-3xl font-medium underline-offset-2 hover:underline"
+      className="text-3xl font-medium hover:underline underline-offset-2"
       onMouseDown={() => router.push("/")}
     >
       <TextScramble

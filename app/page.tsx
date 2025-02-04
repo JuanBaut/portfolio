@@ -14,7 +14,7 @@ const sc = <Anchor href={links.soundcloud}>SoundCloud</Anchor>;
 export default function Page() {
   return (
     <section>
-      <h1 className="text-foreground text-2xl leading-none font-medium tracking-tighter">
+      <h1 className="text-2xl font-medium tracking-tighter leading-none text-foreground">
         <TextShimmer>
           <span>Software Developer</span>
           <span>Open-Source Enthusiast</span>
@@ -55,8 +55,8 @@ export default function Page() {
 
 function ProfileImage() {
   return (
-    <div className="mb-4 grid grid-cols-[1fr_auto_1fr] gap-2 sm:float-right sm:mb-0 sm:ml-2 sm:block">
-      <div className="from-accent w-full bg-linear-to-l" />
+    <div className="grid gap-2 mb-4 sm:block sm:float-right sm:mb-0 sm:ml-2 grid-cols-[1fr_auto_1fr]">
+      <div className="w-full from-accent bg-linear-to-l" />
 
       <a href={links.github} target="_blank" rel="noopener noreferrer">
         <Image
@@ -69,7 +69,7 @@ function ProfileImage() {
         />
       </a>
 
-      <div className="from-accent w-full bg-linear-to-r" />
+      <div className="w-full from-accent bg-linear-to-r" />
     </div>
   );
 }

@@ -55,7 +55,7 @@ export function TextShimmer({
   };
 
   return (
-    <div className={cn("relative inline-block whitespace-nowrap", className)}>
+    <div className={cn("inline-block relative whitespace-nowrap", className)}>
       <AnimatePresence mode={mode} initial={false}>
         <motion.div
           key={currentIndex}

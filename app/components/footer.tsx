@@ -18,7 +18,7 @@ function SocialLink({ href, icon: Icon }) {
 
 function SocialLinks() {
   return (
-    <div className="float-right flex gap-3.5 text-lg transition-opacity duration-300 hover:opacity-90">
+    <div className="flex float-right gap-3.5 text-lg transition-opacity duration-300 hover:opacity-90">
       <SocialLink href={links.linkedin} icon={FiLinkedin} />
       <SocialLink href={links.twitter} icon={FiTwitter} />
       <SocialLink href={links.github} icon={FiGithub} />
@@ -29,7 +29,7 @@ function SocialLinks() {
 
 export default function Footer() {
   return (
-    <div className="mt-16 flex justify-between lg:mt-24">
+    <div className="flex justify-between mt-16 lg:mt-24">
       <span className="self-center text-sm">
         <time>© {YEAR} </time>
         <a

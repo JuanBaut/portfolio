@@ -55,8 +55,8 @@ const fontSans = Golos_Text({
 const fontMono = JetBrains_Mono({
   weight: "variable",
   subsets: ["latin-ext"],
-  variable: "--font-mono"
-})
+  variable: "--font-mono",
+});
 
 export default function RootLayout({
   children,
@@ -89,9 +89,9 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <body className="mx-auto mb-20 mt-2 flex flex-col items-center justify-center antialiased lg:mb-40 lg:mt-8">
+      <body className="flex flex-col justify-center items-center mx-auto mt-2 mb-20 antialiased lg:mt-8 lg:mb-40">
         <ThemeProvider>
-          <main className="mt-2 flex w-full min-w-0 max-w-(--breakpoint-sm) flex-auto flex-col px-6 sm:px-4 md:mt-6 md:px-0">
+          <main className="flex flex-col flex-auto px-6 mt-2 w-full min-w-0 sm:px-4 md:px-0 md:mt-6 max-w-(--breakpoint-sm)">
             <Navbar />
             {children}
             <Footer />
