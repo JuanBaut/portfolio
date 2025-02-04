@@ -1,6 +1,6 @@
 export const metaData = {
   baseUrl: "https://andres.contact/",
-  title: "Full-stack Developer",
+  title: "Andres Bautista",
   name: "Andres Bautista Portfolio",
   ogImage: "/android-chrome-512x512.png",
   description:
