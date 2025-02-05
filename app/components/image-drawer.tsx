@@ -23,11 +23,11 @@ export function ImageDrawer({
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/90" />
 
-        <Drawer.Content className="fixed right-0 bottom-0 left-0 h-[70%] md:h-[80%] w-[70%] md:w-[60%] lg:w-[50%] mx-auto">
-          <div className="p-4 pb-4 mb-20 space-y-4 rounded-xl border bg-background">
+        <Drawer.Content className="fixed right-0 bottom-0 left-0 h-[95%] w-[70%] md:w-[60%] lg:w-[50%] mx-auto">
+          <div className="p-4 space-y-2 rounded-xl border bg-background">
             <div
               aria-hidden="true"
-              className="flex-shrink-0 mx-auto mb-4 w-12 h-1.5 rounded-full bg-muted-foreground/40"
+              className="flex-shrink-0 mx-auto mb-2 w-12 h-1.5 rounded-full bg-muted-foreground/40"
             />
 
             <Drawer.Title>{title}</Drawer.Title>
@@ -36,7 +36,7 @@ export function ImageDrawer({
             </Drawer.Description>
 
             <div className="relative">
-              <div className="overflow-hidden w-full aspect-[16/10]">
+              <div className="overflow-hidden h-full aspect-[16/10]">
                 <Image
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Screenshot of ${title}`}
