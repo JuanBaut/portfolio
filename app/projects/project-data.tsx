@@ -1,27 +1,46 @@
 export interface Project {
+  image: string;
   title: string;
   year: number;
   description: string;
-  url: string;
+  source?: string;
+  website?: string;
+  technologies: string[];
 }
 
 export const projects: Project[] = [
   {
+    image:
+      "https://res.cloudinary.com/dh9rajm0q/image/upload/v1738777215/portfolio/sanarte.png",
     title: "SanArte [WIP]",
     year: 2025,
-    description: "E-commerce for a home-decor business",
-    url: "https://github.com/and-rs/sanarte-hydrogen",
+    description: "E-commerce for a home-decor business.",
+    source: "https://github.com/and-rs/sanarte-hydrogen",
+    technologies: ["Remix", "Hydrogen", "GraphQL", "Tailwind", "Shadcn/ui"],
   },
   {
-    title: "Joseph Carreno Portfolio [WIP]",
+    image:
+      "https://res.cloudinary.com/dh9rajm0q/image/upload/v1738777214/portfolio/joe_car_por.png",
+    title: "Artist Portfolio [WIP]",
     year: 2025,
-    description: "Portfolio for an illustrator and artist",
-    url: "https://github.com/and-rs/portfolio-joseph-carreno",
+    description: "Portfolio for an illustrator and artist.",
+    source: "https://github.com/and-rs/portfolio-joseph-carreno",
+    technologies: ["Next.js", "Shadcn/ui", "Tailwind"],
   },
   {
+    image:
+      "https://res.cloudinary.com/dh9rajm0q/image/upload/v1738776811/portfolio/pixelstream.png",
     title: "Pixel Stream",
     year: 2024,
     description: "Business landing page for modelling agency.",
-    url: "https://pixelstream.com.co",
+    website: "https://pixelstream.com.co",
+    technologies: [
+      "Next.js",
+      "Shadcn/ui",
+      "Tailwind",
+      "Framer Motion",
+      "EmailJS",
+      "Google Ads",
+    ],
   },
 ];
