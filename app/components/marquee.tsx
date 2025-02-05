@@ -20,10 +20,10 @@ export default function Marquee({ technologies }: Props) {
   useEffect(() => {
     if (!shouldAnimate) return;
 
-    const finalPosition = -contentWidth / 2;
+    const finalPosition = -contentWidth - 8;
     const controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
-      duration: 10,
+      duration: 20,
       repeat: Infinity,
       repeatType: "loop",
     });
@@ -35,20 +35,18 @@ export default function Marquee({ technologies }: Props) {
 
   return (
     <div className="overflow-hidden mb-4 h-6" ref={containerRef}>
-      <motion.div
-        className="flex gap-2 w-max"
-        style={{ x: xTranslation }}
-        ref={contentRef}
-      >
-        {technologies.map((tech, index) => (
-          <Badge
-            key={index}
-            variant="secondary"
-            className="font-medium text-nowrap"
-          >
-            {tech}
-          </Badge>
-        ))}
+      <motion.div className="flex gap-2 w-max" style={{ x: xTranslation }}>
+        <div ref={contentRef} className="flex gap-2">
+          {technologies.map((tech, index) => (
+            <Badge
+              key={index}
+              variant="secondary"
+              className="font-medium text-nowrap"
+            >
+              {tech}
+            </Badge>
+          ))}
+        </div>
         {shouldAnimate &&
           technologies.map((tech, index) => (
             <Badge

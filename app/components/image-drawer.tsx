@@ -17,7 +17,7 @@ export function ImageDrawer({
           variant={"outline"}
           size={"icon"}
         >
-          <ExpandIcon />
+          <ExpandIcon strokeWidth={1} />
         </Button>
       </Drawer.Trigger>
       <Drawer.Portal>
@@ -35,16 +35,14 @@ export function ImageDrawer({
               Zoomed in project picture
             </Drawer.Description>
 
-            <div className="relative">
-              <div className="overflow-hidden h-full aspect-[16/10]">
-                <Image
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt={`Screenshot of ${title}`}
-                  className="object-cover rounded-xl"
-                  src={image}
-                  fill
-                />
-              </div>
+            <div className="overflow-hidden relative h-full aspect-[16/10]">
+              <Image
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt={`Screenshot of ${title}`}
+                className="object-cover rounded-xl"
+                src={image}
+                fill
+              />
             </div>
           </div>
         </Drawer.Content>

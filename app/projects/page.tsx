@@ -27,9 +27,9 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row">
               <div className="overflow-hidden relative flex-none p-2 md:w-2/5 aspect-[16/10]">
                 <Image
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 80vw"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 80vw, 100vw"
                   alt={`Screenshot of ${title}`}
-                  className="object-cover p-1 dark:brightness-70"
+                  className="object-cover p-1 brightness-95 saturate-50"
                   src={project.image}
                   priority
                   fill

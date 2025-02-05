@@ -16,7 +16,14 @@ export const projects: Project[] = [
     year: 2025,
     description: "E-commerce for a home-decor business.",
     source: "https://github.com/and-rs/sanarte-hydrogen",
-    technologies: ["Remix", "Hydrogen", "GraphQL", "Tailwind", "Shadcn/ui"],
+    technologies: [
+      "TypeScript",
+      "Remix",
+      "Hydrogen",
+      "GraphQL",
+      "Tailwind",
+      "Shadcn/ui",
+    ],
   },
   {
     image:
@@ -25,7 +32,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "Portfolio for an illustrator and artist.",
     source: "https://github.com/and-rs/portfolio-joseph-carreno",
-    technologies: ["Next.js", "Shadcn/ui", "Tailwind"],
+    technologies: ["TypeScript", "Next.js", "Shadcn/ui", "Tailwind"],
   },
   {
     image:
@@ -35,6 +42,7 @@ export const projects: Project[] = [
     description: "Business landing page for modelling agency.",
     website: "https://pixelstream.com.co",
     technologies: [
+      "TypeScript",
       "Next.js",
       "Shadcn/ui",
       "Tailwind",
