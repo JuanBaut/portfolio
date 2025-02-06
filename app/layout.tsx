@@ -9,6 +9,7 @@ import { metaData } from "./config";
 import "./global.css";
 import { cn } from "./lib/utils";
 import Head from "next/head";
+import BackgroundSvg from "./components/background";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -91,7 +92,8 @@ export default function RootLayout({
       </Head>
       <body className="flex flex-col justify-center items-center mx-auto mt-2 mb-20 antialiased lg:mt-8 lg:mb-40">
         <ThemeProvider>
-          <main className="flex flex-col flex-auto px-6 mt-2 w-full min-w-0 sm:px-4 md:px-0 md:mt-6 max-w-(--breakpoint-sm)">
+          <main className="flex z-50 flex-col flex-auto px-6 mt-2 w-full min-w-0 sm:px-4 md:px-0 md:mt-6 max-w-(--breakpoint-sm)">
+            <BackgroundSvg />
             <Navbar />
             {children}
             <Footer />

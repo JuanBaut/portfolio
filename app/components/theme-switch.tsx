@@ -1,9 +1,8 @@
 "use client";
+import { Moon, Sun } from "lucide-react";
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 import React, { useEffect } from "react";
-import { FaCircleHalfStroke } from "react-icons/fa6";
 import { Button } from "./ui/button";
-import { Moon, Sun } from "lucide-react";
 
 // Key to store user preference in localStorage
 const storageKey = "theme-preference";

@@ -40,7 +40,7 @@ export default function Marquee({ technologies }: Props) {
           {technologies.map((tech, index) => (
             <Badge
               key={index}
-              variant="secondary"
+              variant="outline"
               className="font-medium text-nowrap"
             >
               {tech}
@@ -51,7 +51,7 @@ export default function Marquee({ technologies }: Props) {
           technologies.map((tech, index) => (
             <Badge
               aria-hidden
-              variant="secondary"
+              variant="outline"
               key={index + technologies.length}
               className="font-medium text-nowrap"
             >

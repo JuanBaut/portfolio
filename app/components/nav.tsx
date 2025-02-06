@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { metaData } from "../config";
 import { ThemeSwitch } from "./theme-switch";
 import { TextScramble } from "./ui/text-scramble";
-import { useRouter } from "next/navigation";
 
 const navItems = {
   "/blog": { name: "Blog" },

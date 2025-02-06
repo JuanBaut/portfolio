@@ -29,7 +29,7 @@ export default function Projects() {
                 <Image
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 80vw, 100vw"
                   alt={`Screenshot of ${title}`}
-                  className="object-cover p-1 brightness-95 saturate-50"
+                  className="object-cover brightness-95 saturate-50"
                   src={project.image}
                   priority
                   fill
