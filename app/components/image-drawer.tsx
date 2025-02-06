@@ -21,9 +21,9 @@ export function ImageDrawer({
         </Button>
       </Drawer.Trigger>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/90" />
+        <Drawer.Overlay className="fixed inset-0 z-50 bg-black/70" />
 
-        <Drawer.Content className="fixed right-0 bottom-0 left-0 h-[95%] w-[70%] md:w-[60%] lg:w-[50%] mx-auto">
+        <Drawer.Content className="fixed right-0 bottom-0 left-0 h-[95%] w-[70%] md:w-[60%] lg:w-[50%] mx-auto z-50">
           <div className="p-4 space-y-2 rounded-lg border bg-background">
             <div
               aria-hidden="true"
