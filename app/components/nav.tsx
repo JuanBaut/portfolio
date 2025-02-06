@@ -41,12 +41,12 @@ function HomeTitle() {
 
   return (
     <div
-      className="text-3xl font-medium hover:underline underline-offset-2"
+      className="text-3xl font-medium hover:opacity-80 underline-offset-2"
       onMouseDown={() => router.push("/")}
     >
       <TextScramble
         as="div"
-        speed={0.02}
+        speed={0.01}
         trigger={isTriggered}
         onHoverStart={() => setIsTriggered(true)}
         onHoverEnd={() => setIsTriggered(false)}
