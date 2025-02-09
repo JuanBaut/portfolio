@@ -1,6 +1,6 @@
 "use client";
 
-import { links, metaData } from "src/config";
+import { links, metaData } from "config";
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 import { Button } from "./ui/button";
 

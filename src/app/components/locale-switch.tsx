@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "@i18n/routing";
+import { usePathname } from "i18n/routing";
 import { LanguagesIcon } from "lucide-react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
