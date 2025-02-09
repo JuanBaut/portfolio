@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { links } from "../../config";
-import { Anchor } from "../components/ui/anchor";
-import { TextShimmer } from "../components/ui/text-shimmer";
+import { links } from "config";
+import { Anchor } from "@components/ui/anchor";
+import { TextShimmer } from "@components/ui/text-shimmer";
 
 export default function Page() {
   const t = useTranslations();

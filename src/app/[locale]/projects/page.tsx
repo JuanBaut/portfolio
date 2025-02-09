@@ -1,7 +1,7 @@
-import { ImageDrawer } from "@app/components/image-drawer";
-import Marquee from "@app/components/marquee";
-import { Button } from "@app/components/ui/button";
-import { Card, CardContent } from "@app/components/ui/card";
+import { ImageDrawer } from "@components/image-drawer";
+import Marquee from "@components/marquee";
+import { Button } from "@components/ui/button";
+import { Card, CardContent } from "@components/ui/card";
 import { Separator } from "@radix-ui/react-separator";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";

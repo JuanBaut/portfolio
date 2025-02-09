@@ -7,7 +7,6 @@ import {
 } from "react-tweet";
 import { getTweet } from "react-tweet/api";
 import "./tweet.css";
-import { Suspense } from "react";
 
 const TweetContent = async ({ id, components, onError }: TweetProps) => {
   let error;
