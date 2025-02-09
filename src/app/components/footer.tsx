@@ -8,8 +8,9 @@ const YEAR = new Date().getFullYear();
 
 function SocialLink({ href, icon: Icon }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
+    <a rel="noopener noreferrer" target="_blank" href={href}>
       <Button variant={"ghost"} size={"icon"}>
+        <span className="sr-only">Open link towards social: {href}</span>
         <Icon />
       </Button>
     </a>

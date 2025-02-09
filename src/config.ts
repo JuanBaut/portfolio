@@ -3,8 +3,7 @@ export const metaData = {
   title: "Andres Bautista",
   name: "Andres Bautista Portfolio",
   ogImage: "/android-chrome-512x512.png",
-  description:
-    "Andres Bautista is a Full-stack Developer very passionate about coding",
+  description: "Full-stack Developer very passionate about coding",
 };
 
 export const links = {
