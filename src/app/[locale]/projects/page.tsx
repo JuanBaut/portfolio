@@ -1,11 +1,10 @@
-import { ImageDrawer } from "@components/image-drawer";
+import { ImageDialog } from "@app/components/image-dialog";
 import Marquee from "@components/marquee";
 import { Button } from "@components/ui/button";
 import { Card, CardContent } from "@components/ui/card";
 import { Separator } from "@radix-ui/react-separator";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import { title } from "process";
@@ -41,7 +40,7 @@ export default async function Projects() {
                   priority
                   fill
                 />
-                <ImageDrawer title={project.title} image={project.image} />
+                <ImageDialog title={project.title} image={project.image} />
               </div>
               <CardContent className="flex-1 p-4 space-y-2 md:w-3/5">
                 <Marquee technologies={project.technologies} />

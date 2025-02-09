@@ -16,5 +16,12 @@
   "projects": {
     "website": "Website",
     "source": "Source"
+  },
+  "photos": {
+    "title": "I enjoy taking photos as a hobby, specially car pics, these are taken with my Nikon D3400. Click on them to zoom.",
+    "item": {
+      "title": "Photograph",
+      "description": "Taken by Andres Bautista"
+    }
   }
 }

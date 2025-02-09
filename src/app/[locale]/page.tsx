@@ -36,7 +36,7 @@ export default function Page() {
 function ProfileImage() {
   return (
     <div className="grid gap-2 mb-4 sm:block sm:float-right sm:mb-0 sm:ml-4 grid-cols-[1fr_auto_1fr]">
-      <div className="w-full rounded from-primary/15 bg-linear-to-l" />
+      <div className="w-full rounded from-muted-foreground/40 bg-linear-to-l" />
 
       <a href={links.github} target="_blank" rel="noopener noreferrer">
         <Image
@@ -49,7 +49,7 @@ function ProfileImage() {
         />
       </a>
 
-      <div className="w-full rounded from-primary/15 bg-linear-to-r" />
+      <div className="w-full rounded from-muted-foreground/40 bg-linear-to-r" />
     </div>
   );
 }

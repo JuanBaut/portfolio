@@ -16,5 +16,12 @@
   "projects": {
     "website": "Página web",
     "source": "Código"
+  },
+  "photos": {
+    "title": "Me gusta la fotografía como hobby, especialmente fotos de carros, estas son tomadas con mi Nikon D3400. Haz clic en ellas para ampliar.",
+    "item": {
+      "title": "Fotografía",
+      "description": "Tomada por Andres Bautista"
+    }
   }
 }

@@ -25,14 +25,17 @@
     ],
     "baseUrl": "./src",
     "paths": {
-      "@/*": [
-        "."
-      ],
       "@lib/*": [
         "lib/*"
       ],
       "@app/*": [
         "app/*"
+      ],
+      "@components/*": [
+        "app/components/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
       ]
     },
     "strictNullChecks": true

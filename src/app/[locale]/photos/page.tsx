@@ -13,9 +13,10 @@ export default function Photos() {
 
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">
+      <h1 className="mb-4 text-2xl font-medium tracking-tight">
         {t("nav.photos")}
       </h1>
+      <p>{t("photos.title")}</p>
       <ImageGrid
         columns={3}
         images={[

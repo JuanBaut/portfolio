@@ -2,13 +2,6 @@
 @config '../../tailwind.config.js';
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--border);
-  }
   :root {
     --base-1: 240 20% 99.01960784313727%;
     --base-2: 240 19.999999999999943% 98.0392156862745%;
@@ -107,9 +100,6 @@
     --ring: 213.33333333333334 7.692307692307694% 22.941176470588236%;
     --radius: 0.5rem;
   }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
