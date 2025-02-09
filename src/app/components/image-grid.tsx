@@ -16,7 +16,7 @@ interface ImageGridProps {
   images: {
     src: string;
     alt: string;
-    href?: string;
+    icon?: boolean;
   }[];
   columns?: 2 | 3 | 4;
 }
@@ -33,20 +33,19 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
 
   return (
     <section>
-      <div className={`grid ${gridClass} my-4 gap-4`}>
+      <div
+        className={`grid ${gridClass} my-4 gap-4`}
+        aria-label="Image gallery"
+      >
         {images.map((image, index) => (
           <div key={index} className="relative aspect-square">
-            {index === 0 && (
+            {image.icon && (
               <>
                 <MousePointerClick className="absolute right-0 bottom-0 z-40 m-1 animate-ping stroke-[1.75] text-background/40" />
                 <MousePointerClick className="absolute right-0 bottom-0 z-50 m-1 stroke-[1.75] text-background fill-foreground" />
               </>
             )}
-            {image.href ? (
-              <ImageCredenza alt={image.alt} src={image.src} />
-            ) : (
-              <ImageCredenza alt={image.alt} src={image.src} />
-            )}
+            {image.src && <ImageCredenza alt={image.alt} src={image.src} />}
           </div>
         ))}
       </div>
@@ -60,15 +59,17 @@ async function ImageCredenza({ alt, src }: { alt: string; src: string }) {
   return (
     <Credenza>
       <CredenzaTrigger asChild>
-        <Image
-          className="object-cover z-30 rounded transition hover:opacity-70"
-          sizes="(max-width: 768px) 50vw, 33vw"
-          draggable={false}
-          alt={alt}
-          src={src}
-          priority
-          fill
-        />
+        <div className="relative size-full">
+          <Image
+            className="object-cover z-30 rounded transition hover:opacity-70"
+            sizes="(max-width: 768px) 50vw, 33vw"
+            draggable={false}
+            alt={alt}
+            src={src}
+            priority
+            fill
+          />
+        </div>
       </CredenzaTrigger>
       <CredenzaContent>
         <CredenzaHeader className="sr-only">

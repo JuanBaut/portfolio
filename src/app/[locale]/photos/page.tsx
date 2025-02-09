@@ -22,6 +22,7 @@ export default function Photos() {
         images={[
           {
             src: "https://res.cloudinary.com/dh9rajm0q/image/upload/v1712638509/photos/CAR-11_mm8p9x.png",
+            icon: true,
             alt: "Car",
           },
           {
