@@ -2,7 +2,7 @@
 
 import { links, metaData } from "config";
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
-import { Button } from "./ui/button";
+import { Button } from "@components/ui/button";
 
 const YEAR = new Date().getFullYear();
 

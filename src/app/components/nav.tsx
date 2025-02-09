@@ -4,10 +4,10 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { metaData } from "../../config";
+import { metaData } from "config";
 import LocaleSwitch from "./locale-switch";
 import { ThemeSwitch } from "./theme-switch";
-import { TextScramble } from "./ui/text-scramble";
+import { TextScramble } from "@components/ui/text-scramble";
 
 export function Navbar() {
   const t = useTranslations();

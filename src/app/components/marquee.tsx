@@ -3,7 +3,7 @@
 import { animate, motion, useMotionValue } from "motion/react";
 import { useEffect } from "react";
 import useMeasure from "react-use-measure";
-import { Badge } from "./ui/badge";
+import { Badge } from "@components/ui/badge";
 
 interface Props {
   technologies: string[];

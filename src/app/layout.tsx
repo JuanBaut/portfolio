@@ -9,8 +9,8 @@ import { getMessages } from "next-intl/server";
 import { Golos_Text, JetBrains_Mono } from "next/font/google";
 import Head from "next/head";
 import { ReactNode } from "react";
-import BaseLayout from "./components/base-layout";
-import { ThemeProvider } from "./components/theme-switch";
+import BaseLayout from "@components/base-layout";
+import { ThemeProvider } from "@components/theme-switch";
 import "./global.css";
 import notFound from "./not-found";
 

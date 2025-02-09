@@ -3,7 +3,7 @@
 import { Ellipsis, Moon, Sun } from "lucide-react";
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
+import { Button } from "@components/ui/button";
 
 export function ThemeProvider({
   children,

@@ -5,7 +5,7 @@ import { LanguagesIcon } from "lucide-react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
-import { Button } from "./ui/button";
+import { Button } from "@components/ui/button";
 
 type Props = {};
 
