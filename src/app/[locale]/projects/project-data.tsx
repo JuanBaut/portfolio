@@ -41,6 +41,7 @@ export const projects: Project[] = [
       es: "Portafolio para ilustradores y artistas.",
     },
     source: "https://github.com/and-rs/portfolio-joseph-carreno",
+    website: "https://portfolio-joseph-carreno.vercel.app/",
     technologies: ["TypeScript", "Next.js", "Shadcn/ui", "Tailwind"],
   },
   {
